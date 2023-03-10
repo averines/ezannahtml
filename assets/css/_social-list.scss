@@ -1,0 +1,26 @@
+.social-list {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    &__item {
+        width: 30px;
+        height: 30px;
+        display: block;
+        transition: $t;
+
+        &--vk {
+            background: url(/assets/img/social/vk.svg) no-repeat center/70%;
+        }
+        &--fb {
+            background: url(/assets/img/social/fb.svg) no-repeat center/70%;
+        }
+        &--ig {
+            background: url(/assets/img/social/ig.svg) no-repeat center/70%;
+        }
+
+        &:hover {
+            filter: brightness(0.5);
+        }
+    }
+}

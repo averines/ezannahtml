@@ -1,0 +1,130 @@
+.footer-top {
+    padding: 40px 0;
+    background-color: $bg-l;
+
+    @media screen and (min-width: 992px) {
+        padding: 50px 0;
+    }
+}
+
+.footer-bottom {
+    background-color: $bg-d;
+    color: $text-ll;
+    font-size: 13px;
+
+    &__wrapper {
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.footer-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+        font-size: 11px;
+        font-weight: 500;
+
+        &::after {
+            content: "/";
+            display: inline-block;
+            padding: 0 0.5em;
+        }
+
+        &:last-child {
+            &::after {
+                content: "";
+                display: none;
+            }
+        }
+
+        > a {
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: $ls;
+            color: $text-d;
+        }
+    }
+}
+
+.footer-cols {
+    display: grid;
+    row-gap: 45px;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    padding: 45px 0;
+
+    @media screen and (min-width: 992px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 50px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        column-gap: 130px;
+        padding: 100px 0 40px 0;
+    }
+}
+
+.footer-col {
+    &:last-child {
+        @media screen and (min-width: 992px) {
+            margin-top: -20px;
+        }
+
+        .footer-col__title {
+            @media screen and (min-width: 992px) {
+                margin-left: -20px;
+            }
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: $ls;
+        padding-bottom: 15px;
+
+        @media screen and (min-width: 992px) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__content {
+        text-align: center;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: $ls;
+        font-weight: 500;
+        line-height: 1.6;
+        max-width: 300px;
+
+        @media screen and (min-width: 992px) {
+            text-align: left;
+        }
+
+        > a {
+            text-decoration: none;
+            color: $text;
+            transition: $t;
+            white-space: nowrap;
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}

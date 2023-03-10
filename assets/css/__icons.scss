@@ -1,0 +1,14 @@
+.icon {
+    width: 21px;
+    height: 21px;
+
+    &--map {
+        background: url(/assets/img/icons/map.svg) no-repeat center/100%;
+    }
+    &--phone {
+        background: url(/assets/img/icons/phone.svg) no-repeat center/100%;
+    }
+    &--share {
+        background: url(/assets/img/icons/share.svg) no-repeat center/95%;
+    }
+}
