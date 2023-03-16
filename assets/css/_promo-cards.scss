@@ -1,0 +1,55 @@
+.promo-cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.promo-card {
+    position: relative;
+
+    &__pic {
+        > img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        padding: 40px 30px 40px 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        &--dark {
+            background-color: rgba(104, 104, 104, 0.836);
+            color: #fff;
+
+            .promo-card__link, .promo-card__description {
+                color: #fff;
+            }
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    &__description {
+        color: $text;
+        font-size: 14px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $text;
+        font-size: 14px;
+    }
+}

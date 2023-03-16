@@ -1,0 +1,132 @@
+.header-top {
+    display: none;
+    border-bottom: 1px solid $line-d;
+
+    &__inner {
+        height: 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 992px) {
+        display: block;
+    }
+}
+
+.header-bottom {
+    display: none;
+    border-bottom: 1px solid $line-d;
+
+    &__inner {
+        height: 55px;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 992px) {
+        display: block;
+    }
+}
+
+.header-main {
+    border-bottom: 1px solid $line-d;
+
+    &__inner {
+        height: 65px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        @media screen and (min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.header-logo {
+    display: block;
+    width: 132px;
+    height: 55px;
+    background: url(/assets/img/logo.svg) no-repeat center/100%;
+    margin: 0 auto;
+
+    @media screen and (min-width: 992px) {
+        width: 260px;
+        height: 85px;
+        position: absolute;
+        left: calc(50% - 130px);
+        top: -45px;
+        z-index: 10;
+        background-color: $body;
+        background-size: 75%;
+    }
+}
+
+.header-btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 40px;
+    height: 40px;
+    background: url(/assets/img/icons/burger.svg) no-repeat center;
+
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+}
+
+.header-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__item {
+        font-size: 11px;
+        font-weight: 500;
+
+        &::after {
+            content: "/";
+            display: inline-block;
+            padding: 0 0.5em;
+        }
+
+        &:last-child {
+            &::after {
+                content: "";
+                display: none;
+            }
+        }
+
+        &--hidden {
+            display: none;
+            @media screen and (min-width: 1400px) {
+                display: block;
+            }
+        }
+
+        > a,
+        button {
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: $ls;
+            color: $text-d;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 500;
+            transition: $t;
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}
