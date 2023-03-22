@@ -26,6 +26,7 @@
         line-height: 1.3;
         text-align: center;
         max-width: 450px;
+        letter-spacing: $ls;
 
         @media screen and (min-width: 768px) {
             font-size: 16px;
