@@ -16,6 +16,10 @@ body {
   position: relative;
 }
 
+input,button {
+  font-family: inherit;
+}
+
 .body-overlay {
   overflow-y: hidden;
   touch-action: none;
