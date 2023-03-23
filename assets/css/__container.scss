@@ -9,14 +9,18 @@
 
     @media screen and (min-width: 1200px) {
         padding: 0 30px;
-    }    
+    }
 
     &--full {
         max-width: none;
     }
 
     &--sm {
-        max-width: 570px;
+        max-width: 710px;
+
+        @media screen and (min-width: 375px) {
+            padding: 0 40px;
+        }
     }
 
     &--p0 {
