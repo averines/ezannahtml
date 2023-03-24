@@ -110,59 +110,25 @@
     </header>
 
     <main>
-        <div class="slider-main">
-            <div class="slider-main__item" style="background-color: #d8dbe0;">
-                <div class="slider-main__pic" style="background-image: url(./i/slider/2600.jpg);">
-                </div>
-                <div class="container">
-                    <div class="slider-main__wrapper">
-                        <div class="slider-main__content">
-                            <div class="slider-main__title">Сезонная распродажа поднимет настроение</div>
-                            <div class="slider-main__description">Дополнительная информация</div>
-                            <a class="slider-main__link" href="#">Подробнее</a>
-                        </div>
+        <div class="page-content">
+            <div class="container container--sm">
+                <h1 class="h2">Вход</h1>
+                <p class="text-center">Пожалуйста, укажите e-mail и&nbsp;пароль</p>
+
+                <form class="form form--sm py-2" action="">
+                    <div class="form-row">
+                        <input type="text" placeholder="Email" name="user-email">
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="container py-3">
-            <div class="promo-cards">
-                <div class="promo-card">
-                    <div class="promo-card__pic">
-                        <img src="./i/promo/01.jpg" alt="промо" loading="lazy" width="710" height="560">
+                    <div class="form-row">
+                        <a class="form-row__link" href="user-password.html">Забыли&nbsp;пароль?</a>
+                        <input type="text" placeholder="Пароль" name="user-password">
                     </div>
-                    <div class="promo-card__content promo-card__content--dark">
-                        <div class="promo-card__title"><span>Сезонная распродажа</span> поднимет вам настроение этой осенью</div>
-                        <div class="promo-card__description">Дополнительная информация</div>
-                        <a class="promo-card__link" href="#">Подробнее</a>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn--full">Войти</button>
                     </div>
-                </div>
-                <div class="promo-card">
-                    <div class="promo-card__pic">
-                        <img src="./i/promo/02.jpg" alt="промо" loading="lazy" width="710" height="560">
-                    </div>
-                    <div class="promo-card__content">
-                        <div class="promo-card__title">Новая коллекция</div>
-                        <div class="promo-card__description">Дополнительная информация</div>
-                        <a class="promo-card__link" href="#">Подробнее</a>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <div class="promo-card__pic">
-                        <img src="./i/promo/01.jpg" alt="промо" loading="lazy" width="710" height="560">
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <form class="subscribe">
-                        <div class="subscribe__title">Подпишитесь, чтобы не&nbsp;пропустить самое интересное</div>
-                        <input class="subscribe__input" type="text" placeholder="Ваш email">
-                        <label class="subscribe__checkbox">
-                            <input type="checkbox" name="subscribe-checkbox" id="subscribe-checkbox">
-                            Принимаю <a href="#">пользовательское соглашение</a>
-                        </label>
-                        <button class="subscribe__btn">Подписаться</button>
-                    </form>
-                </div>
+                </form>
+
+                <p class="text-center">Не зарегистрированы? <a href="user-registration.html">Зарегистрироваться</a></p>
             </div>
         </div>
     </main>
