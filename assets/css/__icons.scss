@@ -11,16 +11,22 @@
     &--share {
         background: url(../img/icons/share.svg) no-repeat center/95%;
     }
-
     &--mail {
         background: url(../img/icons/mail.svg) no-repeat center/100%;
     }
-
     &--time {
         background: url(../img/icons/time.svg) no-repeat center/100%;
     }
-
     &--doc {
         background: url(../img/icons/doc.svg) no-repeat center/100%;
+    }
+    &--heart {
+        background: url(../img/icons/heart.svg) no-repeat center/100%;
+    }
+    &--orders {
+        background: url(../img/icons/orders.svg) no-repeat center/100%;
+    }
+    &--user {
+        background: url(../img/icons/user.svg) no-repeat center/100%;
     }
 }
