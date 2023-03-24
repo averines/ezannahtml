@@ -303,6 +303,10 @@ ol li > a:hover {
     padding: 0 40px;
   }
 }
+.container--xl {
+  padding: 0;
+  max-width: 1920px;
+}
 .container--p0 {
   padding-left: 0;
   padding-right: 0;
@@ -1195,6 +1199,43 @@ ol li > a:hover {
 }
 .breadcrumbs > li > span {
   color: #999999;
+}
+
+.about-pics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 1px;
+  -moz-column-gap: 1px;
+       column-gap: 1px;
+}
+@media screen and (min-width: 992px) {
+  .about-pics {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-pics {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.about-pic {
+  display: block;
+}
+@media screen and (min-width: 992px) {
+  .about-pic:nth-child(7), .about-pic:nth-child(8) {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-pic:nth-child(7), .about-pic:nth-child(8) {
+    display: block;
+  }
+}
+.about-pic > img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .pt-0,
