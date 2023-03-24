@@ -367,31 +367,17 @@ ol li > a:hover {
   }
 }
 
-.header-bottom {
-  display: none;
-  border-bottom: 1px solid #dddddd;
-}
-.header-bottom__inner {
-  height: 55px;
-  display: flex;
-  align-items: center;
-}
-@media screen and (min-width: 992px) {
-  .header-bottom {
-    display: block;
-  }
-}
-
 .header-main {
+  z-index: 2;
+  position: relative;
   border-bottom: 1px solid #dddddd;
 }
 .header-main__inner {
-  height: 65px;
+  height: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 @media screen and (min-width: 992px) {
   .header-main__inner {
@@ -709,67 +695,123 @@ ol li > a:hover {
   right: -2px;
 }
 
-.section-menu {
+.category-menu {
   display: none;
   height: 100%;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
-}
-@media screen and (min-width: 992px) {
-  .section-menu {
-    display: flex;
-  }
-}
-.section-menu__item {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.2em;
-  color: #555;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 500;
-  border-bottom: 2px solid transparent;
-  transition: all 0.15s ease-in-out;
-  transform: translateY(1px);
-}
-.section-menu__item--active {
-  border-bottom-color: #3d3d3c !important;
-}
-.section-menu__item:hover {
-  color: #000;
-  border-bottom-color: #dddddd;
-}
-
-.category-menu {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
-.category-menu__item {
+@media screen and (min-width: 992px) {
+  .category-menu {
+    display: flex;
+  }
+}
+.category-menu__wrapper {
+  height: 100%;
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .category-menu__wrapper {
+    display: flex;
+  }
+}
+.category-menu > li {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.category-menu > li:first-child {
+  padding-left: 0;
+}
+.category-menu > li:hover > a::after {
+  background-color: #3d3d3c;
+}
+.category-menu > li:hover .subcategory-menu__wrapper {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+.category-menu > li:hover .subcategory-menu {
+  transform: translateY(0);
+  opacity: 1;
+}
+.category-menu > li > a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #3d3d3c;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  transition: all 0.15s ease-in-out;
+  position: relative;
+}
+.category-menu > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  z-index: 99;
+  transition: all 0.15s ease-in-out;
+}
+.category-menu > li > a:hover {
+  color: #000;
+}
+
+.subcategory-menu {
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+  display: flex;
+}
+@media screen and (min-width: 992px) {
+  .subcategory-menu {
+    flex-direction: row;
+    transform: translateY(2px);
+    transition: all 0.15s ease-in-out;
+    opacity: 0;
+  }
+}
+.subcategory-menu__wrapper {
+  background-color: #fff;
+  box-shadow: 0 -1px 0px 0px #dddddd;
+  z-index: 1;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  display: block;
+}
+@media screen and (min-width: 992px) {
+  .subcategory-menu__wrapper {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+}
+.subcategory-menu > li {
   font-size: 11px;
   font-weight: 500;
 }
-.category-menu__item::after {
+.subcategory-menu > li::after {
   content: "/";
   display: inline-block;
   padding: 0 0.5em;
   opacity: 0.33;
 }
-.category-menu__item:last-child::after {
+.subcategory-menu > li:last-child::after {
   content: "";
   display: none;
 }
-.category-menu__item > a,
-.category-menu__item button {
+.subcategory-menu > li > a,
+.subcategory-menu > li button {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.2em;
@@ -781,12 +823,8 @@ ol li > a:hover {
   font-weight: 500;
   transition: all 0.15s ease-in-out;
 }
-.category-menu__item > a:hover,
-.category-menu__item button:hover {
-  color: #000;
-}
-.category-menu__item--active > a,
-.category-menu__item--active button {
+.subcategory-menu > li > a:hover,
+.subcategory-menu > li button:hover {
   color: #000;
 }
 

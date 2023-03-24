@@ -14,31 +14,17 @@
     }
 }
 
-.header-bottom {
-    display: none;
-    border-bottom: 1px solid $line-d;
-
-    &__inner {
-        height: 55px;
-        display: flex;
-        align-items: center;
-    }
-
-    @media screen and (min-width: 992px) {
-        display: block;
-    }
-}
-
 .header-main {
+    z-index: 2;
+    position: relative;
     border-bottom: 1px solid $line-d;
 
     &__inner {
-        height: 65px;
+        height: 60px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-between;
         align-items: center;
-        position: relative;
 
         @media screen and (min-width: 992px) {
             display: flex;
