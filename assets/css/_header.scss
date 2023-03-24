@@ -39,6 +39,30 @@
     height: 55px;
     background: url(../img/logo.svg) no-repeat center/100%;
     margin: 0 auto 2px auto;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        z-index: 2;
+        content: "";
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 120%;
+        background-color: $body;
+        transform: rotate(45deg) translateX(0);
+
+        opacity: 0;
+    }
+
+    &:hover {
+        &::before {
+            transition: transform .75s ease-in-out, opacity 0.5s ease-in-out;
+            transform: translateX(300px);
+            opacity: 0.6;
+        }
+    }
 
     @media screen and (min-width: 992px) {
         margin: 0 auto;

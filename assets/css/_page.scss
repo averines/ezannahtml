@@ -23,4 +23,24 @@
 
 .page-content {
     padding-top: 40px;
+    padding-bottom: 50px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 45px;
+        padding-bottom: 60px;
+    }
+
+    ul {
+        font-size: 15px;
+        line-height: 1.5;
+        li {
+            a {
+                color: $main;
+
+                &:hover {
+                    color: $main-h;
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,43 @@
+.info-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    column-gap: 50px;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 60px;
+    }
+
+    @media screen and (min-width: 992px) {
+        row-gap: 70px;
+    }
+}
+
+.info-card {
+    display: flex;
+    column-gap: 10px;
+
+    &__icon {
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+    }
+
+    &__content {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    &__title {
+        font-weight: 600;
+        padding-bottom: 0.35em;
+    }
+
+    &__text {
+        > a {
+            color: $text;
+            white-space: nowrap;
+        }
+    }
+}

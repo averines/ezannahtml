@@ -55,11 +55,18 @@ h1--xl,
 
 h2,
 .h2 {
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 600;
-  padding-top: 22px;
+  padding-top: 35px;
   padding-bottom: 15px;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+h2 > span,
+.h2 > span {
+  font-weight: 400;
 }
 h2 + p,
 .h2 + p {
@@ -96,11 +103,11 @@ p {
   line-height: 1.5;
 }
 p a {
-  color: #ab064e;
+  color: #3d3d3c;
   transition: color 0.15s ease-in-out;
 }
 p a:hover {
-  color: #c00a5a;
+  color: #000;
   text-decoration: none;
 }
 
@@ -125,7 +132,7 @@ p a:hover {
 }
 
 .text-main {
-  color: #ab064e;
+  color: #3d3d3c;
 }
 
 .text-muted {
@@ -137,7 +144,7 @@ p a:hover {
 }
 
 .text-bad {
-  color: #ab064e;
+  color: #3d3d3c;
 }
 
 .text-center {
@@ -199,7 +206,7 @@ hr.dotted {
   position: absolute;
   top: -0.1em;
   left: -1em;
-  color: #ab064e;
+  color: #3d3d3c;
 }
 .marker li.checked::before {
   content: "✔";
@@ -207,11 +214,11 @@ hr.dotted {
 }
 .marker li a {
   text-decoration: none;
-  color: #ab064e;
+  color: #3d3d3c;
   transition: all 0.15s ease-in-out;
 }
 .marker li a:hover {
-  color: #c00a5a;
+  color: #000;
 }
 
 ol {
@@ -221,11 +228,11 @@ ol li {
   margin-bottom: 0.75em;
 }
 ol li > a {
-  color: #ab064e;
+  color: #3d3d3c;
   transition: color 0.15s ease-in-out;
 }
 ol li > a:hover {
-  color: #c00a5a;
+  color: #000;
   text-decoration: none;
 }
 
@@ -303,6 +310,14 @@ ol li > a:hover {
     padding: 0 40px;
   }
 }
+.container--md {
+  max-width: 900px;
+}
+@media screen and (min-width: 375px) {
+  .container--md {
+    padding: 0 40px;
+  }
+}
 .container--xl {
   padding: 0;
   max-width: 1920px;
@@ -354,6 +369,48 @@ ol li > a:hover {
 .icon--share {
   background: url(../img/icons/share.svg) no-repeat center/95%;
 }
+.icon--mail {
+  background: url(../img/icons/mail.svg) no-repeat center/100%;
+}
+.icon--time {
+  background: url(../img/icons/time.svg) no-repeat center/100%;
+}
+.icon--doc {
+  background: url(../img/icons/doc.svg) no-repeat center/100%;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #3d3d3c;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  padding: 0.75em 2em;
+  background: #fff;
+  border-radius: 0;
+  border: 1px solid #3d3d3c;
+  transition: all 0.15s ease-in-out;
+}
+.btn:hover {
+  opacity: 0.6;
+}
+
+.btn--secondary {
+  background-color: #3d3d3c;
+  color: #fff;
+}
+.btn--secondary:hover {
+  opacity: 1;
+  background-color: #000;
+}
+
+.btn--wide {
+  min-width: 250px;
+}
 
 .header-top {
   display: none;
@@ -396,6 +453,25 @@ ol li > a:hover {
   height: 55px;
   background: url(../img/logo.svg) no-repeat center/100%;
   margin: 0 auto 2px auto;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+.header-logo::before {
+  z-index: 2;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 120%;
+  background-color: #fcfcfc;
+  transform: rotate(45deg) translateX(0);
+  opacity: 0;
+}
+.header-logo:hover::before {
+  transition: transform 0.75s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateX(300px);
+  opacity: 0.6;
 }
 @media screen and (min-width: 992px) {
   .header-logo {
@@ -785,6 +861,7 @@ ol li > a:hover {
 }
 .subcategory-menu__wrapper {
   background-color: #fff;
+  border-bottom: 1px solid #dddddd;
   box-shadow: 0 -1px 0px 0px #dddddd;
   z-index: 1;
   top: 60px;
@@ -942,6 +1019,48 @@ ol li > a:hover {
   .promo-card__link {
     font-size: 18px;
   }
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+@media screen and (min-width: 768px) {
+  .info-cards {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 60px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .info-cards {
+    row-gap: 70px;
+  }
+}
+
+.info-card {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.info-card__icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.info-card__content {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.info-card__title {
+  font-weight: 600;
+  padding-bottom: 0.35em;
+}
+.info-card__text > a {
+  color: #3d3d3c;
+  white-space: nowrap;
 }
 
 .subscribe {
@@ -1167,6 +1286,23 @@ ol li > a:hover {
 
 .page-content {
   padding-top: 40px;
+  padding-bottom: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .page-content {
+    padding-top: 45px;
+    padding-bottom: 60px;
+  }
+}
+.page-content ul {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.page-content ul li a {
+  color: #3d3d3c;
+}
+.page-content ul li a:hover {
+  color: #000;
 }
 
 .breadcrumbs {
