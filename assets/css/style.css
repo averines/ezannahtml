@@ -1022,7 +1022,7 @@ ol li > a:hover {
   height: 22px;
   border: 1px solid #777;
   cursor: pointer;
-  background: url(/./assets/img/icons/check.svg) no-repeat 100% #fff;
+  background: url(../img/icons/check.svg) no-repeat 100% #fff;
   background-position: center -20px;
   transition: background-position 0.1s ease-in-out;
 }
