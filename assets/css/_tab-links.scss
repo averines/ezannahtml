@@ -18,12 +18,17 @@
     padding: 10px 15px 25px 15px;
     transition: $t;
 
+    @media screen and (min-width: 992px) {
+        row-gap: 10px;
+    }
+
     .icon {
         margin-bottom: auto;
     }
 
     &:hover {
         border-bottom-color: $text;
+        color: $main-h;
     }
 
     &--active {

@@ -1448,14 +1448,49 @@ ol li > a:hover {
   padding: 10px 15px 25px 15px;
   transition: all 0.15s ease-in-out;
 }
+@media screen and (min-width: 992px) {
+  .tab-link {
+    row-gap: 10px;
+  }
+}
 .tab-link .icon {
   margin-bottom: auto;
 }
 .tab-link:hover {
   border-bottom-color: #3d3d3c;
+  color: #000;
 }
 .tab-link--active {
   border-bottom: 2px solid #3d3d3c;
+}
+
+.data-rows {
+  padding-top: 30px;
+}
+
+.data-row {
+  border-bottom: 1px dotted #dddddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+}
+.data-row__title {
+  font-weight: 600;
+  font-size: 15px;
+}
+.data-row__btn {
+  border: none;
+  background-color: #f6f6f6;
+  padding: 0.5em 1em;
+  border-radius: 0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+.data-row__btn:hover {
+  background-color: #3d3d3c;
+  color: #fff;
 }
 
 .pt-0,
