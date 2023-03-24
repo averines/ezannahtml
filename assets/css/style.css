@@ -318,22 +318,22 @@ ol li > a:hover {
 
 @font-face {
   font-family: "Geometria";
-  src: url("/assets/fonts/geometria/Geometria.eot");
-  src: local("Geometria"), url("/assets/fonts/geometria/Geometria.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/geometria/Geometria.woff") format("woff"), url("/assets/fonts/geometria/Geometria.ttf") format("truetype");
+  src: url("../fonts/geometria/Geometria.eot");
+  src: local("Geometria"), url("../fonts/geometria/Geometria.eot?#iefix") format("embedded-opentype"), url("../fonts/geometria/Geometria.woff") format("woff"), url("../fonts/geometria/Geometria.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Geometria";
-  src: url("/assets/fonts/geometria/Geometria-Bold.eot");
-  src: local("Geometria Bold"), local("Geometria-Bold"), url("/assets/fonts/geometria/Geometria-Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/geometria/Geometria-Bold.woff") format("woff"), url("/assets/fonts/geometria/Geometria-Bold.ttf") format("truetype");
+  src: url("../fonts/geometria/Geometria-Bold.eot");
+  src: local("Geometria Bold"), local("Geometria-Bold"), url("../fonts/geometria/Geometria-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/geometria/Geometria-Bold.woff") format("woff"), url("../fonts/geometria/Geometria-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Geometria";
-  src: url("/assets/fonts/geometria/Geometria-Medium.eot");
-  src: local("Geometria Medium"), local("Geometria-Medium"), url("/assets/fonts/geometria/Geometria-Medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/geometria/Geometria-Medium.woff") format("woff"), url("/assets/fonts/geometria/Geometria-Medium.ttf") format("truetype");
+  src: url("../fonts/geometria/Geometria-Medium.eot");
+  src: local("Geometria Medium"), local("Geometria-Medium"), url("../fonts/geometria/Geometria-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/geometria/Geometria-Medium.woff") format("woff"), url("../fonts/geometria/Geometria-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
@@ -342,13 +342,13 @@ ol li > a:hover {
   height: 21px;
 }
 .icon--map {
-  background: url(/assets/img/icons/map.svg) no-repeat center/100%;
+  background: url(../img/icons/map.svg) no-repeat center/100%;
 }
 .icon--phone {
-  background: url(/assets/img/icons/phone.svg) no-repeat center/100%;
+  background: url(../img/icons/phone.svg) no-repeat center/100%;
 }
 .icon--share {
-  background: url(/assets/img/icons/share.svg) no-repeat center/95%;
+  background: url(../img/icons/share.svg) no-repeat center/95%;
 }
 
 .header-top {
@@ -404,7 +404,7 @@ ol li > a:hover {
   display: block;
   width: 132px;
   height: 55px;
-  background: url(/assets/img/logo.svg) no-repeat center/100%;
+  background: url(../img/logo.svg) no-repeat center/100%;
   margin: 0 auto 2px auto;
 }
 @media screen and (min-width: 992px) {
@@ -427,7 +427,7 @@ ol li > a:hover {
   background: none;
   width: 40px;
   height: 40px;
-  background: url(/assets/img/icons/burger.svg) no-repeat center;
+  background: url(../img/icons/burger.svg) no-repeat center;
 }
 @media screen and (min-width: 992px) {
   .header-btn {
@@ -631,13 +631,13 @@ ol li > a:hover {
   transition: all 0.15s ease-in-out;
 }
 .social-list__item--vk {
-  background: url(/assets/img/social/vk.svg) no-repeat center/70%;
+  background: url(../img/social/vk.svg) no-repeat center/70%;
 }
 .social-list__item--fb {
-  background: url(/assets/img/social/fb.svg) no-repeat center/70%;
+  background: url(../img/social/fb.svg) no-repeat center/70%;
 }
 .social-list__item--ig {
-  background: url(/assets/img/social/ig.svg) no-repeat center/70%;
+  background: url(../img/social/ig.svg) no-repeat center/70%;
 }
 .social-list__item:hover {
   filter: brightness(0.5);
@@ -690,16 +690,16 @@ ol li > a:hover {
   filter: brightness(0);
 }
 .user-icon--cart {
-  background: url(/assets/img/icons/cart.svg) no-repeat center;
+  background: url(../img/icons/cart.svg) no-repeat center;
 }
 .user-icon--login {
-  background: url(/assets/img/icons/lock.svg) no-repeat center;
+  background: url(../img/icons/lock.svg) no-repeat center;
 }
 .user-icon--fav {
-  background: url(/assets/img/icons/heart.svg) no-repeat center;
+  background: url(../img/icons/heart.svg) no-repeat center;
 }
 .user-icon--search {
-  background: url(/assets/img/icons/search.svg) no-repeat center;
+  background: url(../img/icons/search.svg) no-repeat center;
 }
 .user-icon__counter {
   font-weight: 600;
@@ -984,7 +984,7 @@ ol li > a:hover {
   height: 22px;
   border: 1px solid #777;
   cursor: pointer;
-  background: url(/assets/img/icons/check.svg) no-repeat 100% #fff;
+  background: url(/./assets/img/icons/check.svg) no-repeat 100% #fff;
   background-position: center -20px;
   transition: background-position 0.1s ease-in-out;
 }
