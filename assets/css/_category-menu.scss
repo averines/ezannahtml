@@ -93,14 +93,14 @@
     }
 
     &__wrapper {
-        background-color: #fff;
+        background-color: $body;
         border-bottom: 1px solid $line-d;
-        box-shadow: 0 -1px 0px 0px $line-d;
         z-index: 1;
         top: 60px;
         left: 0;
         width: 100%;
         display: block;
+        box-shadow: 0 -1px 0px 0px $line-d, 0 10px 50px rgba(255, 255, 255, 0.7);
 
         @media screen and (min-width: 992px) {
             visibility: hidden;

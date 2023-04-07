@@ -1,0 +1,87 @@
+.order-cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-top: 20px;
+}
+
+.order-card {
+    border-bottom: 1px dashed $line-d;
+    padding: 40px 0;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        @media screen and (min-width: 600px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: $ls-sm;
+        font-weight: 600;
+
+        @media screen and (min-width: 768px) {
+            font-size: 16px;
+        }
+
+        > span {
+            font-weight: 400;
+        }
+    }
+
+    &__info {
+        padding-top: 15px;
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: $ls-sm;
+        line-height: 1.4;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 12px;
+        }
+    }
+
+    &__content {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    &__controls {
+        display: flex;
+    }
+
+    &__control {
+        background: none;
+        border: none;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: $ls-sm;
+        font-size: 11px;
+        color: $text-l;
+        border-bottom: 1px solid $line-d;
+        padding: 0 0 0.2em 0;
+        cursor: pointer;
+
+        &:hover {
+            color: $text;
+            border-bottom-color: $text;
+        }
+    }
+}

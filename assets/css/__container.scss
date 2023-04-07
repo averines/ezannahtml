@@ -24,7 +24,7 @@
     }
 
     &--md {
-        max-width: 900px;
+        max-width: 800px;
 
         @media screen and (min-width: 375px) {
             padding: 0 40px;
@@ -36,14 +36,6 @@
         max-width: 1920px;
     }
 
-    &--p0 {
-        padding-left: 0;
-        padding-right: 0;
-
-        @media screen and (min-width: 768px) {
-            padding: 0 15px;
-        }
-    }
 
     &--bg {
         background-color: $bg-l;

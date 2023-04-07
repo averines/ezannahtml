@@ -1,6 +1,7 @@
 .tab-links {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid $line-d;
 }
 
 .tab-link {
@@ -14,9 +15,11 @@
     text-transform: uppercase;
     font-size: 12px;
     color: $text;
-    border-bottom: 1px solid $line-d;
+    border-bottom: 2px solid transparent;
     padding: 10px 15px 25px 15px;
     transition: $t;
+    margin-bottom: -1px;
+    font-weight: 500;
 
     @media screen and (min-width: 992px) {
         row-gap: 10px;
@@ -27,11 +30,14 @@
     }
 
     &:hover {
-        border-bottom-color: $text;
+        border-bottom: 2px solid $line-d;
         color: $main-h;
     }
 
     &--active {
-        border-bottom: 2px solid $main;
+        border-bottom-color: $main;
+        &:hover {
+            border-bottom-color: $main;
+        }
     }
 }
