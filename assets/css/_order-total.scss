@@ -1,0 +1,46 @@
+.order-total {
+    border-top: 1px dashed $line-d;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    justify-content: space-between;
+    padding: 20px 0 40px 0;
+
+    @media screen and (min-width: 400px) {
+        padding: 50px 0 60px 0;
+    }
+
+    @media screen and (min-width: 600px) {
+        padding: 50px 0 80px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 60px 0 90px 0;
+    }
+
+    &__content {
+        p {
+            font-size: 14px;
+            margin: 0;
+            text-align: center;
+
+            @media screen and (min-width: 992px) {
+                text-align: right;
+            }
+
+            > span {
+                white-space: nowrap;
+                font-weight: 500;
+            }
+        }
+    }
+
+    p.order-total__cost {
+        font-weight: 500;
+        font-size: 16px;
+        padding-top: 10px;
+    }
+}

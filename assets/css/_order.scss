@@ -1,0 +1,16 @@
+.order {
+    .order-products {
+        display: flex;
+        flex-direction: column;
+        row-gap: 55px;
+    }
+
+    .order-product {
+        border-bottom: 1px dashed $line-d;
+        padding-bottom: 55px;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

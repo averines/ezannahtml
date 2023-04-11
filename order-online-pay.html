@@ -14,15 +14,37 @@
 
 <body>
     <header>
+        <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressCountry": "RU",
+                        "addressLocality": "г. Москва, Россия",
+                        "postalCode": "105187",
+                        "streetAddress": "ул. Вольная, д. 35, стр. 8"
+                    },
+                    "url": "https://ezanna.ru/",
+                    "email": "potapova@optmoyo.ru",
+                    "name": "Ezanna",
+                    "alternateName": "Эзанна",
+                    "telephone": "8 (800) 301-25-75",
+                    "description": "Интернет-магазин одежды. Женская, мужская и детская одежда для любого возраста.",
+                    "sameAs": ["https://optmoyo.ru/zhen/catalog/ezanna"],
+                    "logo" : "https://ezanna.ru/assets/img/logo.png",
+                    "image" : "https://ezanna.ru/assets/img/office.jpg"
+                }
+            </script>
         <div class="header-top">
             <div class="container">
                 <div class="header-top__inner">
-                    <nav>
-                        <ul class="header-menu">
-                            <li class="header-menu__item"><a href="info-about.html">О нас</a></li>
-                            <li class="header-menu__item"><a href="info-contacts.html">Контакты</a></li>
-                            <li class="header-menu__item"><a href="info-payment.html">Оплата</a></li>
-                            <li class="header-menu__item"><a href="info-delivery.html">Доставка</a></li>
+                    <nav aria-label="Информация">
+                        <ul class="header-menu" role="menubar">
+                            <li class="header-menu__item" role="menuitem"><a href="info-about.html">О нас</a></li>
+                            <li class="header-menu__item" role="menuitem"><a href="info-contacts.html">Контакты</a></li>
+                            <li class="header-menu__item" role="menuitem"><a href="info-payment.html">Оплата</a></li>
+                            <li class="header-menu__item" role="menuitem"><a href="info-delivery.html">Доставка</a></li>
                         </ul>
                     </nav>
                     <div class="header-contacts">
@@ -85,7 +107,10 @@
                         </ul>
                     </nav>
 
-                    <a class="header-logo" href="index.html" aria-label="Интернет магазин одежды EZANNA"></a>
+                    <a class="header-logo" href="index.html" aria-label="Интернет магазин одежды EZANNA">
+                        <img src="./assets/img/logo-s.png" srcset="./assets/img/logo.png 992w, ./assets/img/logo.svg 1200w" alt="EZANNA">
+                    </a>
+
                     <div class="user-menu">
                         <div class="user-menu__item">
                             <button class="user-icon user-icon--search" aria-label="Искать"></button>
@@ -128,20 +153,21 @@
         <div class="page-content">
             <div class="container container--sm">
                 <p class="h2">Онлайн-оплата заказа 4212 <span>от 01.12.2023</span></p>
-                <p>Для оплаты (ввода реквизитов вашей карты) Вы будете перенаправлены на платежный шлюз ПАО СБЕРБАНК. 
-                Соединение с платёжным шлюзом и передача информации осуществляется в защищённом режиме с использованием протокола шифрования SSL. 
-                В случае если ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By Visa, MasterCard SecureCode, MIR Accept, J-Secure
-                для проведения платежа также может потребоваться ввод специального пароля.</p>
+                <p>Для оплаты (ввода реквизитов вашей карты) Вы будете перенаправлены на платежный шлюз ПАО СБЕРБАНК.
+                    Соединение с платёжным шлюзом и передача информации осуществляется в защищённом режиме с использованием протокола шифрования SSL.
+                    В случае если ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By Visa, MasterCard SecureCode, MIR Accept, J-Secure
+                    для проведения платежа также может потребоваться ввод специального пароля.</p>
 
                 <p>Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК.
-                Введённая информация не будет предоставлена третьим лицам за исключением случаев, предусмотренных законодательством РФ.</p>
-                
+                    Введённая информация не будет предоставлена третьим лицам за исключением случаев, предусмотренных законодательством РФ.</p>
+
                 <p>Проведение платежей по банковским картам осуществляется в строгом соответствии с требованиями платёжных систем МИР, VISA Int. MasterCard Europe Sprl, JCB.</p>
 
                 <p>Для перехода на сайт банка и онлайн-оплаты заказа на сумму <span class="text-bold">1345,00&nbsp;₽</span>, нажмите кнопку "Перейти к оплате".</p>
 
-                <div class="text-center pt-2 pb-6">
-                    <a href="/" class="btn btn--wide btn--secondary">Перейти к оплате</a>
+                <div class="btn-group">
+                    <a href="user-cart.html" class="btn btn--wide">Назад в корзину</a>
+                    <a href="customer-orders.html" class="btn btn--wide btn--secondary">Перейти к оплате</a>
                 </div>
             </div>
         </div>

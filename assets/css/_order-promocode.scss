@@ -1,0 +1,40 @@
+.order-promocode {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    max-width: 450px;
+    position: relative;
+
+    @media screen and (min-width: 400px) {
+        row-gap: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 400px;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url(../img/icons/scissors.svg) no-repeat center/100%;
+        position: absolute;
+        top: -12px;
+        right: 10%;
+        z-index: 1;
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid $line-d;
+        font-size: 14px;
+        padding: 0.75em;
+        transition: $t;
+
+        &:focus {
+            outline: none;
+            border-color: $main;
+        }
+    }
+}

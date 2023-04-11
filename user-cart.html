@@ -14,15 +14,37 @@
 
 <body>
     <header>
+        <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressCountry": "RU",
+                        "addressLocality": "г. Москва, Россия",
+                        "postalCode": "105187",
+                        "streetAddress": "ул. Вольная, д. 35, стр. 8"
+                    },
+                    "url": "https://ezanna.ru/",
+                    "email": "potapova@optmoyo.ru",
+                    "name": "Ezanna",
+                    "alternateName": "Эзанна",
+                    "telephone": "8 (800) 301-25-75",
+                    "description": "Интернет-магазин одежды. Женская, мужская и детская одежда для любого возраста.",
+                    "sameAs": ["https://optmoyo.ru/zhen/catalog/ezanna"],
+                    "logo" : "https://ezanna.ru/assets/img/logo.png",
+                    "image" : "https://ezanna.ru/assets/img/office.jpg"
+                }
+            </script>
         <div class="header-top">
             <div class="container">
                 <div class="header-top__inner">
-                    <nav>
-                        <ul class="header-menu">
-                            <li class="header-menu__item"><a href="info-about.html">О нас</a></li>
-                            <li class="header-menu__item"><a href="info-contacts.html">Контакты</a></li>
-                            <li class="header-menu__item"><a href="info-payment.html">Оплата</a></li>
-                            <li class="header-menu__item"><a href="info-delivery.html">Доставка</a></li>
+                    <nav aria-label="Информация">
+                        <ul class="header-menu" role="menubar">
+                            <li class="header-menu__item" role="menuitem"><a href="info-about.html">О нас</a></li>
+                            <li class="header-menu__item" role="menuitem"><a href="info-contacts.html">Контакты</a></li>
+                            <li class="header-menu__item" role="menuitem"><a href="info-payment.html">Оплата</a></li>
+                            <li class="header-menu__item" role="menuitem"><a href="info-delivery.html">Доставка</a></li>
                         </ul>
                     </nav>
                     <div class="header-contacts">
@@ -85,7 +107,10 @@
                         </ul>
                     </nav>
 
-                    <a class="header-logo" href="index.html" aria-label="Интернет магазин одежды EZANNA"></a>
+                    <a class="header-logo" href="index.html" aria-label="Интернет магазин одежды EZANNA">
+                        <img src="./assets/img/logo-s.png" srcset="./assets/img/logo.png 992w, ./assets/img/logo.svg 1200w" alt="EZANNA">
+                    </a>
+
                     <div class="user-menu">
                         <div class="user-menu__item">
                             <button class="user-icon user-icon--search" aria-label="Искать"></button>
@@ -108,6 +133,7 @@
             </div>
         </div>
     </header>
+
     <main>
         <div class="page-header">
             <div class="container">
@@ -125,10 +151,362 @@
             </div>
         </div>
         <div class="page-content">
+            <div class="container container--sm-">
+                <div class="order">
+                    <div class="order-products">
+                        <div class="order-product">
+                            <div class="order-product__controls">
+                                <button class="order-product__control">Удалить</button>
+                            </div>
+                            <div class="order-product__content">
+                                <a class="order-product__pic" href="product.html">
+                                    <img src="./i/products/z01.jpg" alt="Брюки 112548" loading="lazy" height="206" width="138">
+                                </a>
+                                <div class="order-product__info">
+                                    <div class="order-product__title">Брюки</div>
+                                    <div class="order-product__details">
+                                        <div>Арт: 112548</div>
+                                        <div>Цвет: Дымная ваниль</div>
+                                        <div>Размер: 44/176</div>
+                                        <div><button>Изменить размер</button></div>
+                                    </div>
+                                    <div class="order-product__price order-product__price--discount">2280&nbsp;₽ <span>3520&nbsp;₽</span></div>
+                                    <div class="order-product__counter">
+                                        <button>–</button>
+                                        <input type="text" value="3">
+                                        <button>+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-product">
+                            <div class="order-product__controls">
+                                <button class="order-product__control">Удалить</button>
+                            </div>
+                            <div class="order-product__content">
+                                <a class="order-product__pic" href="product.html">
+                                    <img src="./i/products/z01.jpg" alt="Брюки 112548" loading="lazy" height="206" width="138">
+                                </a>
+                                <div class="order-product__info">
+                                    <div class="order-product__title">Брюки</div>
+                                    <div class="order-product__details">
+                                        <div>Арт: 112548</div>
+                                        <div>Цвет: Дымная ваниль</div>
+                                        <div>Размер: 44/176</div>
+                                        <div><button>Изменить размер</button></div>
+                                    </div>
+                                    <div class="order-product__price order-product__price--discount">2280&nbsp;₽ <span>3520&nbsp;₽</span></div>
+                                    <div class="order-product__counter">
+                                        <button>–</button>
+                                        <input type="text" value="3">
+                                        <button>+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-product">
+                            <div class="order-product__controls">
+                                <button class="order-product__control">Удалить</button>
+                            </div>
+                            <div class="order-product__content">
+                                <a class="order-product__pic" href="product.html">
+                                    <img src="./i/products/z01.jpg" alt="Брюки 112548" loading="lazy" height="206" width="138">
+                                </a>
+                                <div class="order-product__info">
+                                    <div class="order-product__title">Брюки</div>
+                                    <div class="order-product__details">
+                                        <div>Арт: 112548</div>
+                                        <div>Цвет: Дымная ваниль</div>
+                                        <div>Размер: 44/176</div>
+                                        <div><button>Изменить размер</button></div>
+                                    </div>
+                                    <div class="order-product__price order-product__price--discount">2280&nbsp;₽ <span>3520&nbsp;₽</span></div>
+                                    <div class="order-product__counter">
+                                        <button>–</button>
+                                        <input type="text" value="3">
+                                        <button>+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-total">
+                        <div class="order-promocode">
+                            <input type="text" class="order-promocode__input" placeholder="Промокод">
+                            <button class="btn">Применить</button>
+                        </div>
 
+                        <div class="order-total__content">
+                            <p>Общая стоимость товаров: <span>2950 ₽</span></p>
+                            <p>Скидка: <span>250 ₽</span></p>
+                            <p>Скидка по промокоду: <span>250 ₽</span></p>
+                            <p class="order-total__cost">Итого: <span>1450 ₽</span></p>
+                        </div>
+                    </div>
+                    <div class="order-details">
+                        <div class="order-detail">
+                            <div class="order-detail__title">Ваши данные</div>
+                            <div class="order-detail__content">
+                                <div class="form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <div class="form-group__label">Имя</div>
+                                            <input type="text" class="form-group__input" placeholder="Ваше имя">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-group__label">Фамилия</div>
+                                            <input type="text" class="form-group__input" placeholder="Ваша фамилия">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <div class="form-group__label">Контактный телефон</div>
+                                            <input type="text" class="form-group__input" placeholder="+7 (___) ___-__-__">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <div class="form-group__label">Электронная почта</div>
+                                            <input type="text" class="form-group__input" placeholder="mymail@mail.ru">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <div class="form-group__label">Адрес доставки</div>
+                                            <input type="text" class="form-group__input" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-detail">
+                            <div class="order-detail__title">Способы доставки</div>
+                            <div class="order-detail__content">
+                                <div class="form">
+                                    <p class="mt-0">Доставка до вашего города оплачивается отдельно, согласно тарифам почтовой организации. Будет выставлен отдельный счет на&nbsp;доставку.</p>
+                                    <div class="form-row">
+                                        <div class="form-radio">
+                                            <div class="form-radio__group">
+                                                <input type="radio" name="delivery" id="delivery-1" checked>
+                                                <label for="delivery-1">EMS</label>
+                                            </div>
+                                            <div class="form-radio__group"><input type="radio" name="delivery" id="delivery-2">
+                                                <label for="delivery-2">СДЕК</label>
+                                            </div>
+                                            <div class="form-radio__group">
+                                                <input type="radio" name="delivery" id="delivery-3">
+                                                <label for="delivery-3">Почта России</label>
+                                            </div>
+                                            <div class="form-radio__group">
+                                                <input type="radio" name="delivery" id="delivery-4">
+                                                <label for="delivery-4">DPD</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-detail">
+                            <div class="order-detail__title">Способы оплаты</div>
+                            <div class="order-detail__content">
+                                <div class="form">
+                                    <div class="form-row">
+                                        <div class="form-radio">
+                                            <div class="form-radio__group">
+                                                <input type="radio" name="payment" id="payment-1" checked>
+                                                <label for="payment-1">Оплата наличными или&nbsp;картой при&nbsp;получении заказа в&nbsp;офисе</label>
+                                            </div>
+                                            <div class="form-radio__group">
+                                                <input type="radio" name="payment" id="payment-2">
+                                                <label for="payment-2">Оплата картой без процентов на сайте</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-controls">
+                        <a href="category.html" class="btn btn--wide">Продолжить покупки</a>
+                        <a href="order-done-courier.html" class="btn btn--wide btn--secondary">Оформить заказ</a>
+                    </div>
+                </div>
+            </div>
 
+            <!-- похожие товары -->
+            <section class="pt-6 pb-3">
+                <div class="container">
+                    <h2 class="h1 text-center pb-2">Похожие товары</h2>
+                    <div class="product-cards">
+                        <div class="product-card" href="product.html">
+                            <button aria-label="В избранное" class="product-card__favorite is-active"></button>
+                            <a href="product.html" class="product-card__pic">
+                                <img src="./i/products/z01.jpg" alt="худи 123" loading="lazy" height="335" width="223">
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__badges">
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                <div class="product-card__price">2280&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="product-card" href="product.html">
+                            <button aria-label="В избранное" class="product-card__favorite is-active"></button>
+                            <a href="product.html" class="product-card__pic">
+                                <img src="./i/products/z02.jpg" alt="худи 123" loading="lazy" height="335" width="223">
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__badges">
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                <div class="product-card__price">2280&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="product-card" href="product.html">
+                            <button aria-label="В избранное" class="product-card__favorite is-active"></button>
+                            <a href="product.html" class="product-card__pic">
+                                <img src="./i/products/z03.jpg" alt="худи 123" loading="lazy" height="335" width="223">
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__badges">
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                <div class="product-card__price">2280&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="product-card" href="product.html">
+                            <button aria-label="В избранное" class="product-card__favorite is-active"></button>
+                            <a href="product.html" class="product-card__pic">
+                                <img src="./i/products/z01.jpg" alt="худи 123" loading="lazy" height="335" width="223">
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__badges">
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                <div class="product-card__price">2280&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="product-card" href="product.html">
+                            <button aria-label="В избранное" class="product-card__favorite is-active"></button>
+                            <a href="product.html" class="product-card__pic">
+                                <img src="./i/products/z02.jpg" alt="худи 123" loading="lazy" height="335" width="223">
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__badges">
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                <div class="product-card__price">2280&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="product-card" href="product.html">
+                            <button aria-label="В избранное" class="product-card__favorite is-active"></button>
+                            <a href="product.html" class="product-card__pic">
+                                <img src="./i/products/z03.jpg" alt="худи 123" loading="lazy" height="335" width="223">
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__badges">
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                <div class="product-card__price">2280&nbsp;₽</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- недавно просмотренные -->
+            <section class="py-3">
+                <div class="container">
+                    <h2 class="h1 text-center pb-2">Недавно просмотренные</h2>
+                    <div class="product-cards">
+                        <div class="product-card" href="product.html">
+                            <button aria-label="В избранное" class="product-card__favorite is-active"></button>
+                            <a href="product.html" class="product-card__pic">
+                                <img src="./i/products/z01.jpg" alt="худи 123" loading="lazy" height="335" width="223">
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__badges">
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                <div class="product-card__price">2280&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="product-card" href="product.html">
+                            <button aria-label="В избранное" class="product-card__favorite is-active"></button>
+                            <a href="product.html" class="product-card__pic">
+                                <img src="./i/products/z02.jpg" alt="худи 123" loading="lazy" height="335" width="223">
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__badges">
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                <div class="product-card__price">2280&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="product-card" href="product.html">
+                            <button aria-label="В избранное" class="product-card__favorite is-active"></button>
+                            <a href="product.html" class="product-card__pic">
+                                <img src="./i/products/z03.jpg" alt="худи 123" loading="lazy" height="335" width="223">
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__badges">
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                <div class="product-card__price">2280&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="product-card" href="product.html">
+                            <button aria-label="В избранное" class="product-card__favorite is-active"></button>
+                            <a href="product.html" class="product-card__pic">
+                                <img src="./i/products/z01.jpg" alt="худи 123" loading="lazy" height="335" width="223">
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__badges">
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                <div class="product-card__price">2280&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="product-card" href="product.html">
+                            <button aria-label="В избранное" class="product-card__favorite is-active"></button>
+                            <a href="product.html" class="product-card__pic">
+                                <img src="./i/products/z02.jpg" alt="худи 123" loading="lazy" height="335" width="223">
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__badges">
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                <div class="product-card__price">2280&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="product-card" href="product.html">
+                            <button aria-label="В избранное" class="product-card__favorite is-active"></button>
+                            <a href="product.html" class="product-card__pic">
+                                <img src="./i/products/z03.jpg" alt="худи 123" loading="lazy" height="335" width="223">
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__badges">
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                <div class="product-card__price">2280&nbsp;₽</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-
     </main>
 
     <footer>

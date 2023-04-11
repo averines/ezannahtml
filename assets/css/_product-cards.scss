@@ -56,7 +56,8 @@
         right: 8px;
         top: 8px;
         border-radius: 50%;
-        transform: $t;
+        transition: $t;
+        z-index: 99;
 
         &:hover,
         &.is-active {
