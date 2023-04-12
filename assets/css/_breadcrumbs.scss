@@ -3,12 +3,14 @@
     padding: 0;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
     > li {
         text-transform: uppercase;
         font-size: 11px;
         letter-spacing: $ls;
+        display: flex;
 
         &::after {
             content: "/";

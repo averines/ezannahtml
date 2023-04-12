@@ -1,0 +1,196 @@
+.product {
+    @media screen and (min-width: 600px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+    }
+
+    &__pics {
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        border: 1px solid red;
+        padding: 30px;
+    }
+
+    &__rating {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        font-size: 14px;
+        color: $text-l;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: $ls-sm;
+        font-weight: 500;
+        justify-content: center;
+        line-height: 1.6;
+
+        > span {
+            width: 81px;
+            height: 22px;
+            background: url(../img/icons/star-empty.svg) repeat-x left center;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 100%;
+                position: absolute;
+                background: url(../img/icons/star-filled.svg) repeat-x left center;
+            }
+
+            @for $i from 0 through 5 {
+                &[data-rating="#{$i}"] {
+                    &::after {
+                        width: 20% * $i;
+                    }
+                }
+            }
+        }
+    }
+
+    &__sales {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: $ls-sm;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.6;
+        padding-top: 5px;
+
+        > span {
+            color: $text-l;
+        }
+    }
+
+    &__title {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 18px;
+    }
+
+    &__price {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: $ls-sm;
+
+        &--discount {
+            display: flex;
+            column-gap: 10px;
+            justify-content: center;
+            color: $special-3;
+        }
+
+        > span {
+            color: $text;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 120%;
+                height: 1px;
+                background-color: $text;
+                position: absolute;
+                top: 50%;
+                left: -10%;
+            }
+        }
+    }
+
+    &__details {
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: $ls;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3px;
+        line-height: 1.4;
+        padding-bottom: 20px;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    &__description {
+        border-top: 1px solid $line-d;
+        padding-top: 20px;
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    &__colors {
+        display: flex;
+        column-gap: 7px;
+        row-gap: 7px;
+
+        @media screen and (min-width: 600px) {
+            column-gap: 9px;
+            row-gap: 9px;
+        }
+    }
+
+    &__color {
+        border: 1px solid transparent;
+
+        img {
+            display: block;
+        }
+    }
+
+    div.product__color {
+        border: 1px solid $main;
+    }
+
+    a.product__color {
+        transition: $t;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &__sizes {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+    &__size {
+        border-radius: 0;
+        border: 1px solid $line-d;
+        background: #fff;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 1.5;
+        padding: 7px 10px;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 2px 5px $line-d;
+        }
+
+        &.is-active {
+            border-color: $main-h;
+        }
+    }
+}
+
+.product-section {
+    &__title {
+        text-transform: uppercase;
+        font-size: 11px;
+        letter-spacing: $ls-sm;
+        font-weight: 500;
+        padding: 15px 0;
+    }
+}

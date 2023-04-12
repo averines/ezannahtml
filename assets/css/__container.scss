@@ -36,8 +36,15 @@
         max-width: 1920px;
     }
 
-
     &--bg {
         background-color: $bg-l;
+    }
+
+    &--product {
+        padding: 0;
+
+        @media screen and (min-width: 600px) {
+            padding: 45px 20px;
+        }
     }
 }
