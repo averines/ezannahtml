@@ -158,68 +158,144 @@
 
         <div class="container container--product">
             <div class="product">
-                <div class="product__pics">
-                    <picture>
-                        <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/z01-xl.webp">
-                        <source type="image/webp" srcset="./i/products/z01.webp">
-                        <img src="./i/products/z01.jpg" alt="Костюм (худи и брюки) #91697" width="345" height="517">
-                    </picture>
+                <div class="product-slider">
+                    <div class="product-slider__thumbs">
+                        <a href="#pic-1" class="product-slider__thumb is-active">
+                            <picture>
+                                <source type="image/webp" srcset="./i/products/z01-sm.webp">
+                                <img src="./i/products/z01-sm.jpg" alt="Костюм (худи и брюки) #91697" width="64" height="97">
+                            </picture>
+                        </a>
+                        <a href="#pic-2" class="product-slider__thumb">
+                            <picture>
+                                <source type="image/webp" srcset="./i/products/z01-sm.webp">
+                                <img src="./i/products/z01-sm.jpg" alt="Костюм (худи и брюки) #91697" width="64" height="97">
+                            </picture>
+                        </a>
+                        <a href="#pic-3" class="product-slider__thumb">
+                            <picture>
+                                <source type="image/webp" srcset="./i/products/z01-sm.webp">
+                                <img src="./i/products/z01-sm.jpg" alt="Костюм (худи и брюки) #91697" width="64" height="97">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="product-slider__content">
+                        <picture id="pic-1">
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/z01-xl.webp">
+                            <source type="image/webp" srcset="./i/products/z01.webp">
+                            <img src="./i/products/z01.jpg" alt="Костюм (худи и брюки) #91697" width="345" height="517">
+                        </picture>
+                        <picture id="pic-2">
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/z01-xl.webp">
+                            <source type="image/webp" srcset="./i/products/z01.webp">
+                            <img src="./i/products/z01.jpg" alt="Костюм (худи и брюки) #91697" width="345" height="517">
+                        </picture>
+                        <picture id="pic-3">
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/z01-xl.webp">
+                            <source type="image/webp" srcset="./i/products/z01.webp">
+                            <img src="./i/products/z01.jpg" alt="Костюм (худи и брюки) #91697" width="345" height="517">
+                        </picture>
+                    </div>
                 </div>
 
                 <div class="product__content">
-                    <div class="product__rating">
-                        <span data-rating="4"></span>
-                        (18)
-                    </div>
-                    <div class="product__sales">Купили: <span>23 раза</span></div>
-                    <h1 class="product__title">Костюм (худи и брюки)</h1>
-                    <div class="product__price product__price--discount">2280&nbsp;₽ <span>3520&nbsp;₽</span></div>
-                    <div class="product__details">
-                        <div>Арт: 112548</div>
-                        <div>Цвет: Дымная ваниль</div>
-                        <div>Состав: хлопок 90%, полиэстер 10%</div>
-                        <div>Сезон: Демисезон</div>
-                    </div>
-                    <div class="product__description">
-                        Спортивный костюм из высококачественного хлопкового полотна премиум класса компакт пенье - футер 3х-нитка, без начеса с плетением нити диагональ.
-                    </div>
-
-                    <div class="product-section mt-2">
-                        <div class="product-section__title">Цвет</div>
-                        <div class="product-section__content">
-                            <div class="product__colors">
-                                <div class="product__color">
-                                    <picture>
-                                        <source type="image/webp" srcset="./i/products/z01-sm.webp">
-                                        <img src="./i/products/z01-sm.jpg" alt="Дымная ваниль" width="64" height="97">
-                                    </picture>
-                                </div>
-                                <a class="product__color" href="product.html">
-                                    <picture>
-                                        <source type="image/webp" srcset="./i/products/z01-sm.webp">
-                                        <img src="./i/products/z01-sm.jpg" alt="Оранжевое безумие" width="64" height="97">
-                                    </picture>
-                                </a>
-                                <a class="product__color" href="product.html">
-                                    <picture>
-                                        <source type="image/webp" srcset="./i/products/z01-sm.webp">
-                                        <img src="./i/products/z01-sm.jpg" alt="Оранжевое безумие" width="64" height="97">
-                                    </picture>
-                                </a>
+                    <div class="product__header">
+                        <div class="product__main">
+                            <div class="product__rating">
+                                <span data-rating="4"></span>
+                                (18)
                             </div>
+
+                            <div class="product__sales">Купили: <span>23 раза</span></div>
+
+                            <h1 class="product__title">Костюм (худи и брюки)</h1>
+
+                            <div class="product__price product__price--discount">2280&nbsp;₽ <span>3520&nbsp;₽</span></div>
+                        </div>
+
+                        <div class="product__details">
+                            <div>Арт: 112548</div>
+                            <div>Цвет: Дымная ваниль</div>
+                            <div>Состав: хлопок 90%, полиэстер 10%</div>
+                            <div>Сезон: Демисезон</div>
                         </div>
                     </div>
 
-                    <div class="product-section mt-2">
-                        <div class="product-section__title">Размеры</div>
-                        <div class="product-section__content">
-                            <div class="product__sizes">
-                                <button class="product__size is-active" href="product.html">54</button>
-                                <button class="product__size" href="product.html">56</button>
-                                <button class="product__size" href="product.html">58</button>
-                                <button class="product__size" href="product.html">60</button>
+                    <div>
+                        <div class="product__description">
+                            Спортивный костюм из высококачественного хлопкового полотна премиум класса компакт пенье - футер 3х-нитка, без начеса с плетением нити диагональ.
+                        </div>
+
+                        <div class="product-section mt-2">
+                            <div class="product-section__title">Цвет</div>
+                            <div class="product-section__content">
+                                <div class="product__colors">
+                                    <div class="product__color">
+                                        <picture>
+                                            <source type="image/webp" srcset="./i/products/z01-sm.webp">
+                                            <img src="./i/products/z01-sm.jpg" alt="Дымная ваниль" width="64" height="97">
+                                        </picture>
+                                    </div>
+                                    <a class="product__color" href="product.html">
+                                        <picture>
+                                            <source type="image/webp" srcset="./i/products/z01-sm.webp">
+                                            <img src="./i/products/z01-sm.jpg" alt="Оранжевое безумие" width="64" height="97">
+                                        </picture>
+                                    </a>
+                                    <a class="product__color" href="product.html">
+                                        <picture>
+                                            <source type="image/webp" srcset="./i/products/z01-sm.webp">
+                                            <img src="./i/products/z01-sm.jpg" alt="Оранжевое безумие" width="64" height="97">
+                                        </picture>
+                                    </a>
+                                </div>
                             </div>
-                            <button class="btn-link mt-1">Таблица размеров</button>
+                        </div>
+
+                        <div class="product-section product-section--collapsible mt-2">
+                            <div class="product-section__title">Размеры</div>
+                            <div class="product-section__content">
+                                <div class="product__sizes">
+                                    <button class="product__size is-active" href="product.html">54</button>
+                                    <button class="product__size" href="product.html">56</button>
+                                    <button class="product__size" href="product.html">58</button>
+                                    <button class="product__size" href="product.html">60</button>
+                                </div>
+                                <button class="btn-link mt-1">Таблица размеров</button>
+                            </div>
+                        </div>
+
+                        <div class="product-section product-section--collapsible">
+                            <div class="product-section__title">Дополнительная информация</div>
+                            <div class="product-section__content">
+                                <ul class="product__params">
+                                    <li><span>Длина</span>Удлиненная</li>
+                                    <li><span>Фасон</span>Свободный крой</li>
+                                    <li><span>Рукав</span>Длинный</li>
+                                    <li><span>Длина</span>Удлиненная</li>
+                                    <li><span>Фасон</span>Свободный крой</li>
+                                    <li><span>Рукав</span>Длинный</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="product-section product-section--collapsible">
+                            <div class="product-section__title">Отзывы и вопросы <span>(3)</span></div>
+                            <div class="product-section__content">
+                                123
+                            </div>
+                        </div>
+
+                        <button class="btn btn--full btn--secondary mt-3">В корзину</button>
+                        <button class="btn btn--full btn--icon mt-1"><span class="icon icon--heart"></span> Добавить в избранное</button>
+
+                        <div class="product-shares mt-2">
+                            <div class="product-shares__title">Поделиться</div>
+                            <button class="product-share product-share--tg" data-social="telegram" title="Telegram"></button>
+                            <button class="product-share product-share--wa" data-social="whatsapp" title="WhatsApp"></button>
+                            <button class="product-share product-share--vk" data-social="vkontakte" title="VK"></button>
+                            <button class="product-share product-share--ma" data-social="moimir" title="Мой Мир@Mail.Ru"></button>
+                            <button class="product-share product-share--ok" data-social="odnoklassniki" title="Одноклассники"></button>
                         </div>
                     </div>
                 </div>
@@ -461,6 +537,7 @@
             </div>
         </div>
     </footer>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

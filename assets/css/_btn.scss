@@ -16,7 +16,7 @@
     line-height: 1.3;
 
     &:hover {
-        background-color: $main;
+        background-color: $main-h;
         color: #fff;
     }
 }
@@ -37,6 +37,21 @@
 
 .btn--full {
     width: 100%;
+}
+
+.btn--icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    padding: 1em 2em;
+
+    .icon {
+        width: 1.5em;
+        height: 1.5em;
+        display: inline-block;
+        background-size: 100%;
+    }
 }
 
 .btn-group {
