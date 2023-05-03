@@ -1,0 +1,29 @@
+.catalog {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 20px;
+}
+
+.catalog-filter {
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.catalog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.catalog-cards {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.catalog-footer {
+    padding: 50px 0 0 0;
+}

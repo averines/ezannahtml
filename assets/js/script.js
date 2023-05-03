@@ -1,8 +1,4 @@
-
-
-
 window.addEventListener('click', (e) => {
-    // console.log(e.target.classList);
 
     if (e.target.closest(".product-section") && e.target.closest(".product-section").classList.contains("product-section--collapsible")) {
         let section = e.target.closest(".product-section");
@@ -11,6 +7,10 @@ window.addEventListener('click', (e) => {
         if (e.target.classList.contains("product-section__title") || e.target.closest(".product-section__title")) {
             title.classList.toggle("is-active");
         }
+    }
+
+    if (e.target.classList.contains("filter__title")) {
+        e.target.classList.toggle("is-collapsed");
     }
 })
 
