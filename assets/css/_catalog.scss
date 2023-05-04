@@ -1,6 +1,6 @@
 .catalog {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: minmax(200px, 300px) 4fr;
     column-gap: 20px;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .catalog-cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 

@@ -109,6 +109,11 @@
         text-align: center;
         color: $text;
         display: inline-block;
+        width: 100%;
+        
+        &:hover {
+            color: $main-h;
+        }
     }
 
     &__badges {
