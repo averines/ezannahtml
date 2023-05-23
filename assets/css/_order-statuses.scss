@@ -14,9 +14,37 @@
     padding: 0.25em 0.75em;
     font-weight: 500;
     letter-spacing: 0;
-    // color: $text-l;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+        transform: skewX(20deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: run 1.5s ease-in 0s infinite;
+    }
 
     &--good {
         background-color: $special-2;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+@keyframes run {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 100%;
     }
 }

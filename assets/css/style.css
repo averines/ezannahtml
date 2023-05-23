@@ -327,6 +327,10 @@ ol li > a:hover {
   background-color: #f6f6f6;
 }
 
+.text-special {
+  color: rgb(55, 90, 245);
+}
+
 .container {
   max-width: 1470px;
   padding: 0 15px;
@@ -2477,11 +2481,36 @@ ol li > a:hover {
   padding: 0.25em 0.75em;
   font-weight: 500;
   letter-spacing: 0;
+  position: relative;
+  overflow: hidden;
+}
+.order-status::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+  transform: skewX(20deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: run 1.5s ease-in 0s infinite;
 }
 .order-status--good {
   background-color: #acb78e;
 }
+.order-status--good::after {
+  display: none;
+}
 
+@keyframes run {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
 @media screen and (min-width: 700px) {
   .product {
     display: grid;
