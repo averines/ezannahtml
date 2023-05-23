@@ -1,5 +1,6 @@
 let body = document.querySelector("body");
 let catalogFilter = document.querySelector(".catalog-filter");
+let headerMobile = document.querySelector(".header-mobile");
 
 window.addEventListener('click', (e) => {
     if (e.target.closest(".product-section") && e.target.closest(".product-section").classList.contains("product-section--collapsible")) {
@@ -36,16 +37,31 @@ window.addEventListener('click', (e) => {
     if (e.target.classList.contains("control-select__option")) {
         let controlSelect = e.target.closest(".control-select");
         let controlSelectOptions = controlSelect.querySelectorAll(".control-select__option");
-        controlSelectOptions.forEach(o => {o.classList.remove("is-active")})
+        controlSelectOptions.forEach(o => { o.classList.remove("is-active") })
         e.target.classList.add("is-active");
-
     }
+
+    if (e.target.classList.contains("header-btn")) {
+        body.classList.toggle("body-overflow");
+        headerMobile.classList.toggle("is-active");
+    }
+
+    if (e.target.closest("button") && e.target.closest("button").dataset.action == "closeHeaderMobile" || e.target.classList.contains("header-mobile")) {
+        body.classList.remove("body-overflow");
+        headerMobile.classList.remove("is-active");
+    }
+
+    if (e.target.classList.contains("category-menu-mobile__title")) {
+        e.target.classList.toggle("is-active");
+    }    
 })
 
 window.addEventListener('resize', function () {
     if (window.innerWidth > 992) {
         body.classList.remove("body-overflow");
-        catalogFilter.classList.remove("is-active");
+        if (catalogFilter) { catalogFilter.classList.remove("is-active") }
+        if (headerMobile) { headerMobile.classList.remove("is-active"); }
+
     };
 });
 

@@ -203,9 +203,14 @@ hr {
 	border: none;
 	background-color: transparent;
 	border-bottom: 1px solid $line-d;
+	width: 100%;
 
 	&.dotted {
 		border-bottom: 2px dotted $line-dd;
+	}
+
+	&.invert {
+		border-bottom-color: $text;
 	}
 }
 
