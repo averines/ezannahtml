@@ -8,6 +8,7 @@
     <title>Интернет магазин одежды EZANNA</title>
     <meta name="description" content="Качественная российская женская, мужская и детская одежда по индивидуальным размерам. Оплата на сайте, доставка во все регионы.">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./assets/libs/fancybox/fancybox/fancybox.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon.png">
 </head>
@@ -35,7 +36,7 @@
                     "logo" : "https://ezanna.ru/assets/img/logo.png",
                     "image" : "https://ezanna.ru/assets/img/office.jpg"
                 }
-            </script>
+        </script>
         <div class="header-top">
             <div class="container">
                 <div class="header-top__inner">
@@ -132,6 +133,64 @@
                 </div>
             </div>
         </div>
+        <div class="header-mobile">
+            <div class="header-mobile__inner">
+                <button class="btn-icon header-mobile__btn" title="Закрыть меню" data-action="closeHeaderMobile"><span class="icon icon--close"></span></button>
+
+                <nav aria-label="Каталог">
+                    <div class="category-menu-mobile">
+                        <div class="category-menu-mobile__title">Женщинам</div>
+                        <div class="category-menu-mobile__content">
+                            <ul class="subcategory-menu-mobile">
+                                <li><a href="#">Костюмы</a></li>
+                                <li><a href="#">Худи</a></li>
+                                <li><a href="#">Свитшоты</a></li>
+                                <li><a href="#">Брюки</a></li>
+                                <li><a href="#">Шорты</a></li>
+                                <li><a href="#">Толстовки</a></li>
+                                <li><a href="#">Комбинезоны</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="category-menu-mobile">
+                        <div class="category-menu-mobile__title">Мужчинам</div>
+                        <div class="category-menu-mobile__content">
+                            <ul class="subcategory-menu-mobile">
+                                <li><a href="#">Брюки</a></li>
+                                <li><a href="#">Шорты</a></li>
+                                <li><a href="#">Толстовки</a></li>
+                                <li><a href="#">Комбинезоны</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="category-menu-mobile">
+                        <div class="category-menu-mobile__title">Детям</div>
+                        <div class="category-menu-mobile__content">
+                            <ul class="subcategory-menu-mobile">
+                                <li><a href="#">Толстовки</a></li>
+                                <li><a href="#">Комбинезоны</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <hr class="my-2 invert">
+                <nav aria-label="Пользователь">
+                    <ul class="header-menu header-menu--mobile" role="menubar">
+                        <li class="header-menu__item" role="menuitem"><a href="user-login.html">Личный кабинет</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="user-favorites.html">Избранное</a></li>
+                    </ul>
+                </nav>
+                <hr class="my-2 invert">
+                <nav aria-label="Информация">
+                    <ul class="header-menu header-menu--mobile" role="menubar">
+                        <li class="header-menu__item" role="menuitem"><a href="info-about.html">О нас</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="info-contacts.html">Контакты</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="info-payment.html">Оплата</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="info-delivery.html">Доставка</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -226,6 +285,7 @@
             </div>
         </div>
     </footer>
+    <script src="./assets/libs/fancybox/index.umd.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 

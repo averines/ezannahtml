@@ -82,3 +82,8 @@ if (productThumbs) {
         })
     })
 }
+
+
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+});

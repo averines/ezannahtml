@@ -8,6 +8,7 @@
     <title>Интернет магазин одежды EZANNA</title>
     <meta name="description" content="Качественная российская женская, мужская и детская одежда по индивидуальным размерам. Оплата на сайте, доставка во все регионы.">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./assets/libs/fancybox/fancybox/fancybox.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon.png">
 </head>
@@ -132,6 +133,64 @@
                 </div>
             </div>
         </div>
+        <div class="header-mobile">
+            <div class="header-mobile__inner">
+                <button class="btn-icon header-mobile__btn" title="Закрыть меню" data-action="closeHeaderMobile"><span class="icon icon--close"></span></button>
+
+                <nav aria-label="Каталог">
+                    <div class="category-menu-mobile">
+                        <div class="category-menu-mobile__title">Женщинам</div>
+                        <div class="category-menu-mobile__content">
+                            <ul class="subcategory-menu-mobile">
+                                <li><a href="#">Костюмы</a></li>
+                                <li><a href="#">Худи</a></li>
+                                <li><a href="#">Свитшоты</a></li>
+                                <li><a href="#">Брюки</a></li>
+                                <li><a href="#">Шорты</a></li>
+                                <li><a href="#">Толстовки</a></li>
+                                <li><a href="#">Комбинезоны</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="category-menu-mobile">
+                        <div class="category-menu-mobile__title">Мужчинам</div>
+                        <div class="category-menu-mobile__content">
+                            <ul class="subcategory-menu-mobile">
+                                <li><a href="#">Брюки</a></li>
+                                <li><a href="#">Шорты</a></li>
+                                <li><a href="#">Толстовки</a></li>
+                                <li><a href="#">Комбинезоны</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="category-menu-mobile">
+                        <div class="category-menu-mobile__title">Детям</div>
+                        <div class="category-menu-mobile__content">
+                            <ul class="subcategory-menu-mobile">
+                                <li><a href="#">Толстовки</a></li>
+                                <li><a href="#">Комбинезоны</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <hr class="my-2 invert">
+                <nav aria-label="Пользователь">
+                    <ul class="header-menu header-menu--mobile" role="menubar">
+                        <li class="header-menu__item" role="menuitem"><a href="user-login.html">Личный кабинет</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="user-favorites.html">Избранное</a></li>
+                    </ul>
+                </nav>
+                <hr class="my-2 invert">
+                <nav aria-label="Информация">
+                    <ul class="header-menu header-menu--mobile" role="menubar">
+                        <li class="header-menu__item" role="menuitem"><a href="info-about.html">О нас</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="info-contacts.html">Контакты</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="info-payment.html">Оплата</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="info-delivery.html">Доставка</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -162,23 +221,23 @@
                 <div class="data-rows">
                     <div class="data-row">
                         <div class="data-row__title">Александр</div>
-                        <button class="data-row__btn">Изменить</button>
+                        <button class="data-row__btn" data-fancybox data-src="#modal1">Изменить</button>
                     </div>
                     <div class="data-row">
                         <div class="data-row__title">Невский</div>
-                        <button class="data-row__btn">Изменить</button>
+                        <button class="data-row__btn" data-fancybox data-src="#modal2">Изменить</button>
                     </div>
                     <div class="data-row">
                         <div class="data-row__title">alex007@mail.ru</div>
-                        <button class="data-row__btn">Изменить</button>
+                        <button class="data-row__btn" data-fancybox data-src="#modal3">Изменить</button>
                     </div>
                     <div class="data-row">
                         <div class="data-row__title">8 999 215-01-01</div>
-                        <button class="data-row__btn">Изменить</button>
+                        <button class="data-row__btn" data-fancybox data-src="#modal4">Изменить</button>
                     </div>
                     <div class="data-row">
                         <div class="data-row__title">Пароль</div>
-                        <button class="data-row__btn">Изменить</button>
+                        <button class="data-row__btn" data-fancybox data-src="#modal5">Изменить</button>
                     </div>
                 </div>
             </div>
@@ -242,6 +301,79 @@
             </div>
         </div>
     </footer>
+
+    <div class="modals">
+        <div class="modal modal--sm" id="modal1">
+            <div class="modal__title">Изменить имя</div>
+            <div class="modal__content">
+                <form class="form form--sm py-2" action="">
+                    <div class="form-row">
+                        <input type="text" placeholder="Новое имя" name="user-name">
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn--full btn--secondary">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal--sm" id="modal2">
+            <div class="modal__title">Изменить фамилию</div>
+            <div class="modal__content">
+                <form class="form form--sm py-2" action="">
+                    <div class="form-row">
+                        <input type="text" placeholder="Новая фамилия" name="user-surname">
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn--full btn--secondary">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal--sm" id="modal3">
+            <div class="modal__title">Изменить email</div>
+            <div class="modal__content">
+                <form class="form form--sm py-2" action="">
+                    <div class="form-row">
+                        <input type="text" placeholder="Новый email" name="user-email">
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn--full btn--secondary">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal--sm" id="modal4">
+            <div class="modal__title">Изменить телефон</div>
+            <div class="modal__content">
+                <form class="form form--sm py-2" action="">
+                    <div class="form-row">
+                        <input type="text" placeholder="Новый телефон" name="user-phone">
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn--full btn--secondary">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal--sm" id="modal5">
+            <div class="modal__title">Изменить пароль</div>
+            <div class="modal__content">
+                <form class="form form--sm py-2" action="">
+                    <div class="form-row">
+                        <input type="text" placeholder="Старый пароль" name="user-password">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Новый пароль" name="user-newpassword">
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn--full btn--secondary">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/libs/fancybox/index.umd.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 

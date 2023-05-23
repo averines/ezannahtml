@@ -1108,6 +1108,69 @@ ol li > a:hover {
   color: #000;
 }
 
+.category-menu-mobile:last-child .category-menu-mobile__title {
+  border: none;
+}
+.category-menu-mobile__title {
+  color: #ebebec;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  border-bottom: 1px solid #3d3d3c;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.category-menu-mobile__title::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url(/assets/img/icons/plus.svg) no-repeat center/100%;
+  transition: all 0.15s ease-in-out;
+}
+.category-menu-mobile__title.is-active {
+  color: #fff;
+}
+.category-menu-mobile__title.is-active::after {
+  transform: rotate(45deg);
+}
+.category-menu-mobile__title.is-active + .category-menu-mobile__content {
+  padding: 20px;
+  max-height: 1000px;
+}
+.category-menu-mobile__content {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.15s ease-in-out;
+}
+
+.subcategory-menu-mobile {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.subcategory-menu-mobile li a {
+  color: #999999;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  transition: all 0.15s ease-in-out;
+}
+.subcategory-menu-mobile li a:hover {
+  color: #ebebec;
+}
+
 .promo-cards {
   display: flex;
   flex-direction: column;
@@ -2013,8 +2076,12 @@ ol li > a:hover {
   letter-spacing: 0.07em;
   line-height: 1.4;
   display: flex;
+  row-gap: 20px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
   flex-direction: column;
-  row-gap: 3px;
 }
 @media screen and (min-width: 768px) {
   .order-card__info {
@@ -2391,6 +2458,28 @@ ol li > a:hover {
   .order-controls {
     justify-content: flex-end;
   }
+}
+
+.order-statuses {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  margin-bottom: 20px;
+}
+
+.order-status {
+  background-color: #999999;
+  color: #ebebec;
+  font-weight: 400;
+  text-transform: none;
+  padding: 0.25em 0.75em;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.order-status--good {
+  background-color: #acb78e;
 }
 
 @media screen and (min-width: 700px) {
@@ -3044,7 +3133,7 @@ ol li > a:hover {
   width: calc(100% + 2px);
   right: -1px;
   left: -1px;
-  top: 0;
+  top: -1px;
   padding: 10px;
 }
 @media screen and (min-width: 992px) {
@@ -3270,67 +3359,29 @@ ol li > a:hover {
   z-index: 1;
 }
 
-.category-menu-mobile:last-child .category-menu-mobile__title {
-  border: none;
-}
-.category-menu-mobile__title {
-  color: #ebebec;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 0.15em;
-  border-bottom: 1px solid #3d3d3c;
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  cursor: pointer;
-}
-.category-menu-mobile__title::after {
-  content: "";
-  display: block;
-  width: 12px;
-  height: 12px;
-  background: url(/assets/img/icons/plus.svg) no-repeat center/100%;
-  transition: all 0.15s ease-in-out;
-}
-.category-menu-mobile__title.is-active {
-  color: #fff;
-}
-.category-menu-mobile__title.is-active::after {
-  transform: rotate(45deg);
-}
-.category-menu-mobile__title.is-active + .category-menu-mobile__content {
-  padding: 20px;
-  max-height: 1000px;
-}
-.category-menu-mobile__content {
-  padding: 0 20px;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.15s ease-in-out;
+.modal {
+  display: none;
 }
 
-.subcategory-menu-mobile {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
+.modal {
+  background-color: #fff;
+  width: 90%;
+  margin: 0 auto;
 }
-.subcategory-menu-mobile li a {
-  color: #999999;
-  text-decoration: none;
+.modal--sm {
+  max-width: 600px;
+}
+.modal__title {
+  font-weight: 500;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 0.15em;
-  transition: all 0.15s ease-in-out;
+  text-align: center;
+  border-bottom: 1px solid #dddddd;
+  padding: 30px;
 }
-.subcategory-menu-mobile li a:hover {
-  color: #ebebec;
+.modal__content {
+  padding: 30px;
 }
 
 .pt-0,

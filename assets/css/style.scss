@@ -11,6 +11,8 @@
 @import "social-list";
 @import "user-menu";
 @import "category-menu";
+@import "category-menu-mobile";
+
 @import "promo-cards";
 @import "info-cards";
 
@@ -32,6 +34,7 @@
 @import "order-total";
 @import "order-promocode";
 @import "order-controls";
+@import "order-statuses";
 
 @import "product";
 @import "pagination";
@@ -40,7 +43,7 @@
 @import "filter";
 @import "filter-range";
 
-@import "category-menu-mobile";
+@import "modal";
 
 
 
