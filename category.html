@@ -35,7 +35,7 @@
                     "logo" : "https://ezanna.ru/assets/img/logo.png",
                     "image" : "https://ezanna.ru/assets/img/office.jpg"
                 }
-            </script>
+        </script>
         <div class="header-top">
             <div class="container">
                 <div class="header-top__inner">
@@ -154,6 +154,10 @@
             <div class="container container--full">
                 <div class="catalog">
                     <div class="catalog-filter">
+                        <div class="catalog-filter__header">
+                            Фильтры
+                            <button class="btn-icon" title="Закрыть" data-action="closeCatalogFilter"><span class="icon icon--close"></span></button>
+                        </div>
                         <div class="filter">
                             <div class="filter__title">Категории</div>
                             <div class="filter__content">
@@ -172,31 +176,18 @@
                             <div class="filter__title">Цвет</div>
                             <div class="filter__content">
                                 <div class="filter-checkbox filter-checkbox--colors">
-                                    <button class="filter-checkbox__btn is-active" style="background-color:#f8f6fc" title="Белый"></button>
-                                    <button class="filter-checkbox__btn" style="background-color:#f6f0f8" title="Тофу"></button>
-                                    <button class="filter-checkbox__btn" style="background-color:#f7f2e6" title="Ваниль"></button>
-                                    <button class="filter-checkbox__btn" style="background-color:#ebd9ca" title="Бежевый"></button>
-                                    <button class="filter-checkbox__btn" style="background-color:#97b3df" title="Пыльный деним"></button>
-                                    <!-- <button class="filter-checkbox__btn" style="background-color:#97b3df" title="Пыльный деним/Белый"></button> -->
-
-                                    <button class="filter-checkbox__btn" style="background-color:#91c8a1" title="Эвкалипт"></button>
-                                    <!-- <button class="filter-checkbox__btn" style="background-color:#91c8a1" title="Эвкалипт (QR)"></button> -->
-                                    <button class="filter-checkbox__btn" style="background-color:#7a9e8b" title="Оливковый"></button>
-                                    <!-- <button class="filter-checkbox__btn" style="background-color:#7a9e8b" title="Оливковый/Тофу"></button> -->
-
-                                    <button class="filter-checkbox__btn" style="background-color:#1f9160" title="Зеленый"></button>
-                                    <!-- <button class="filter-checkbox__btn" style="background-color:#2e9b68" title="Зеленый (QR)"></button> -->
-
-                                    <button class="filter-checkbox__btn" style="background-color:#aaa3b1" title="Пепельный"></button>
-                                    <button class="filter-checkbox__btn" style="background-color:#818a8c" title="Дымчатый"></button>
-                                    <button class="filter-checkbox__btn" style="background-color:#5f6973" title="Графит"></button>
-                                    <button class="filter-checkbox__btn" style="background-color:#1f1e1e" title="Черный"></button>
-                                    <button class="filter-checkbox__btn" style="background-color:#c1132b" title="Мак"></button>
+                                    <button class="filter-checkbox__btn filter-checkbox__btn--white" title="Белый, Тофу"></button>
+                                    <button class="filter-checkbox__btn filter-checkbox__btn--biege is-active" title="Бежевый, Ваниль"></button>
+                                    <button class="filter-checkbox__btn filter-checkbox__btn--lightblue" title="Пыльный деним"></button>
+                                    <button class="filter-checkbox__btn filter-checkbox__btn--green" title="Эвкалипт, Оливковый, Зеленый"></button>
+                                    <button class="filter-checkbox__btn filter-checkbox__btn--gray" title="Пепельный, Дымчатый, Графит"></button>
+                                    <button class="filter-checkbox__btn filter-checkbox__btn--black" title="Черный"></button>
+                                    <button class="filter-checkbox__btn filter-checkbox__btn--red" title="Мак"></button>
                                 </div>
                             </div>
                         </div>
                         <div class="filter">
-                            <div class="filter__title">Категории</div>
+                            <div class="filter__title">Размеры</div>
                             <div class="filter__content">
                                 <div class="filter-checkbox">
                                     <button class="filter-checkbox__btn is-active">44/170</button>
@@ -228,14 +219,19 @@
                         <div class="filter">
                             <div class="filter__title">Цена</div>
                             <div class="filter__content">
-                                <div class="filter-checkbox">
-                                    <button class="filter-checkbox__btn">Футер с начёсом</button>
-                                    <button class="filter-checkbox__btn">Футер 3-х нитка</button>
+                                <div class="filter-range">
+                                    <div class="filter-range__inputs">
+                                        <input type="text" class="filter-range__input" value="1280">
+                                        <input type="text" class="filter-range__input" value="2890">
+                                    </div>
+                                    <!-- <div class="filter-range__sliders">
+                                        <input type="range" class="filter-range__slider" min="1000" max="5000" step="any">
+                                        <input type="range" class="filter-range__slider" min="1000" max="5000" step="any">
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
-
-                        <button class="btn">Очистить</button>
+                        <button class="btn mt-2">Сбросить фильтры</button>
                     </div>
                     <div class="catalog-result">
                         <div class="catalog-header">
@@ -248,14 +244,16 @@
                                 <a class="pagination__btn" href="#">59</a>
                                 <a class="pagination__btn pagination__btn--cap" href="#" title="Следующая страница"></a>
                             </div>
-
-                            <div class="control-select">
-                                <div class="control-select__option control-select__option--active">По умолчанию</div>
-                                <div class="control-select__options">
-                                    <button class="control-select__option">По возрастанию цены</button>
-                                    <button class="control-select__option">По убыванию цены</button>
-                                    <button class="control-select__option">Сначала новые</button>
-                                    <button class="control-select__option">Сначала старые</button>
+                            <button class="catalog-header__btn" title="Показать фильтры">Фильтры</button>
+                            <div class="catalog-header__select">
+                                <div class="control-select">
+                                    <div class="control-select__options">
+                                        <button class="control-select__option is-active">По&nbsp;умолчанию</button>
+                                        <button class="control-select__option">По возрастанию цены</button>
+                                        <button class="control-select__option">По убыванию цены</button>
+                                        <button class="control-select__option">Сначала новые</button>
+                                        <button class="control-select__option">Сначала старые</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

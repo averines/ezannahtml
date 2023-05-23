@@ -61,30 +61,6 @@
     display: flex;
     flex-direction: column;
 
-    &--colors {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        column-gap: 5px;
-        row-gap: 5px;
-
-        .filter-checkbox__btn {
-            padding: 12px 0;
-            border: 1px solid #fff;
-            position: relative;
-            box-shadow: 0 0 0 3px #fff inset;
-            transition: $t;
-
-            &:hover {
-                border-color: $text-d;
-            }
-
-            &.is-active {
-                background-image: none;
-                border-color: $main-h;
-            }
-        }
-    }
-
     &__btn {
         border: none;
         background: none;
@@ -98,6 +74,7 @@
 
         &:hover {
             color: $main-h;
+            font-weight: 500;
         }
 
         &.is-active {
@@ -105,6 +82,82 @@
             font-weight: 500;
             background: url(../img/icons/check.svg) no-repeat left -3px top 3px;
         }
+    }
 
+    &--colors {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 5px;
+        row-gap: 5px;
+
+        .filter-checkbox__btn {
+            padding: 12px 0;
+            height: 40px;
+            border: 1px solid #fff;
+            position: relative;
+            box-shadow: 0 0 0 3px #fff inset;
+            transition: $t;
+
+            &:hover {
+                border-color: $text-d;
+            }
+
+            &--white {
+                background: #f9fbff;
+            }
+
+            &--biege {
+                background: #f8f1e2;
+            }
+
+            &--lightblue {
+                background: #97b3df;
+            }
+
+            &--yellow {
+                background: #ffe54f;
+            }
+
+            &--green {
+                background: #91c8a1;
+            }
+
+            &--brown {
+                background: #944835;
+            }
+
+            &--red {
+                background: #c1132b;
+            }
+
+            &--orange {
+                background: #ffa216;
+            }
+
+            &--magenta {
+                background: #ff90c7;
+            }
+
+            &--gray {
+                background: #818a8c;
+            }
+
+            &--blue {
+                background: #1e5b94;
+            }
+
+            &--purple {
+                background: #8e28b6;
+            }
+
+            &--black {
+                background: #1f1e1e;
+            }
+
+            &.is-active {
+                background-image: none;
+                border-color: $main-h;
+            }
+        }
     }
 }

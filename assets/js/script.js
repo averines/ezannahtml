@@ -1,5 +1,7 @@
-window.addEventListener('click', (e) => {
+let body = document.querySelector("body");
+let catalogFilter = document.querySelector(".catalog-filter");
 
+window.addEventListener('click', (e) => {
     if (e.target.closest(".product-section") && e.target.closest(".product-section").classList.contains("product-section--collapsible")) {
         let section = e.target.closest(".product-section");
         let title = section.querySelector(".product-section__title");
@@ -12,7 +14,40 @@ window.addEventListener('click', (e) => {
     if (e.target.classList.contains("filter__title")) {
         e.target.classList.toggle("is-collapsed");
     }
+
+    if (e.target.classList.contains("filter-checkbox__btn")) {
+        e.target.classList.toggle("is-active");
+    }
+
+    if (e.target.classList.contains("product-card__favorite")) {
+        e.target.classList.toggle("is-active");
+    }
+
+    if (e.target.classList.contains("catalog-header__btn")) {
+        body.classList.toggle("body-overflow");
+        catalogFilter.classList.toggle("is-active");
+    }
+
+    if (e.target.closest("button") && e.target.closest("button").dataset.action == "closeCatalogFilter" || e.target.classList.contains('catalog')) {
+        body.classList.remove("body-overflow");
+        catalogFilter.classList.remove("is-active");
+    }
+
+    if (e.target.classList.contains("control-select__option")) {
+        let controlSelect = e.target.closest(".control-select");
+        let controlSelectOptions = controlSelect.querySelectorAll(".control-select__option");
+        controlSelectOptions.forEach(o => {o.classList.remove("is-active")})
+        e.target.classList.add("is-active");
+
+    }
 })
+
+window.addEventListener('resize', function () {
+    if (window.innerWidth > 992) {
+        body.classList.remove("body-overflow");
+        catalogFilter.classList.remove("is-active");
+    };
+});
 
 const productThumbs = document.querySelectorAll('.product-slider__thumb')
 if (productThumbs) {
