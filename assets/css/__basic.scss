@@ -347,7 +347,18 @@ ol {
 	background-color: $bg-l;
 }
 
-
 .text-special {
 	color: rgb(55, 90, 245);
+}
+
+
+.f-carousel {
+	--f-carousel-dot-width: 6px;
+	--f-carousel-dot-height: 6px;
+	--f-carousel-theme-color: $text;
+
+	&__dots {
+		position: absolute;
+		bottom: 0;
+	}
 }

@@ -8,7 +8,10 @@
     <title>Интернет-магазин одежды EZANNA</title>
     <meta name="description" content="Качественная российская женская, мужская и детская одежда по индивидуальным размерам. Оплата на сайте, доставка во все регионы.">
     <meta name="format-detection" content="telephone=no">
+
     <link rel="stylesheet" href="./assets/libs/fancybox/fancybox/fancybox.css">
+    <link rel="stylesheet" href="./assets/libs/fancybox/carousel/carousel.css">
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon.png">
 </head>
@@ -247,11 +250,13 @@
     </header>
 
     <main>
+        <h1 class="visually-hidden">Интернет-магазин одежды EZANNA</h1>
+
         <!-- слайдер -->
         <section>
-            <h1 class="visually-hidden">Интернет-магазин одежды EZANNA</h1>
-            <div class="slider-main">
-                <div class="slider-main__item" style="background-color: #d8dbe0;">
+            <div class="slider-main f-carousel" id="sliderMain">
+
+                <div class="slider-main__item f-carousel__slide" style="background-color: #d8dbe0;">
                     <div class="slider-main__pic" style="background-image: url(./i/slider/2600.jpg);">
                     </div>
                     <div class="container">
@@ -264,6 +269,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="slider-main__item f-carousel__slide" style="background-color: #d8dbe0;">
+                    <div class="slider-main__pic" style="background-image: url(./i/slider/2600.jpg);">
+                    </div>
+                    <div class="container">
+                        <div class="slider-main__wrapper">
+                            <div class="slider-main__content">
+                                <div class="slider-main__title">Сезонная распродажа поднимет настроение</div>
+                                <div class="slider-main__description">Дополнительная информация</div>
+                                <a class="slider-main__link" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 

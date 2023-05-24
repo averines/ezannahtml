@@ -1,5 +1,7 @@
 .slider-main {
     position: relative;
+    // height: 450px;
+    overflow: hidden;
 
     &__pic {
         height: 450px;

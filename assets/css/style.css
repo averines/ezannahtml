@@ -340,6 +340,16 @@ ol li > a:hover {
   color: rgb(55, 90, 245);
 }
 
+.f-carousel {
+  --f-carousel-dot-width: 6px;
+  --f-carousel-dot-height: 6px;
+  --f-carousel-theme-color: $text;
+}
+.f-carousel__dots {
+  position: absolute;
+  bottom: 0;
+}
+
 .container {
   max-width: 1470px;
   padding: 0 15px;
@@ -1473,6 +1483,7 @@ ol li > a:hover {
 
 .slider-main {
   position: relative;
+  overflow: hidden;
 }
 .slider-main__pic {
   height: 450px;

@@ -2,6 +2,7 @@ let body = document.querySelector("body");
 let catalogFilter = document.querySelector(".catalog-filter");
 let headerMobile = document.querySelector(".header-mobile");
 
+
 window.addEventListener('click', (e) => {
     if (e.target.closest(".product-section") && e.target.closest(".product-section").classList.contains("product-section--collapsible")) {
         let section = e.target.closest(".product-section");
@@ -62,6 +63,7 @@ window.addEventListener('click', (e) => {
 
 })
 
+
 window.addEventListener('resize', function () {
     if (window.innerWidth > 992) {
         body.classList.remove("body-overflow");
@@ -70,6 +72,7 @@ window.addEventListener('resize', function () {
 
     };
 });
+
 
 const productThumbs = document.querySelectorAll('.product-slider__thumb')
 if (productThumbs) {
@@ -93,3 +96,9 @@ if (productThumbs) {
 Fancybox.bind("[data-fancybox]", {
     // Your custom options
 });
+
+
+const container = document.getElementById("sliderMain");
+const options = { infinite: false };
+
+new Carousel(container, options);
