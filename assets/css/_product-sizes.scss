@@ -1,0 +1,25 @@
+.product-sizes {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.product-size {
+    border-radius: 0;
+    border: 1px solid $line-d;
+    background: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 7px 10px;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 2px 5px $line-d;
+    }
+
+    &.is-active {
+        border-color: $main-h;
+    }
+}

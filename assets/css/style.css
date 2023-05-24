@@ -33,6 +33,15 @@ textarea {
   font-family: inherit;
 }
 
+button {
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
 .body-overlay {
   overflow-y: hidden;
   touch-action: none;
@@ -767,10 +776,21 @@ ol li > a:hover {
   font-size: 13px;
 }
 .footer-bottom__wrapper {
-  height: 46px;
+  padding: 10px 0;
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   align-items: center;
   justify-content: space-between;
+}
+.footer-bottom__wrapper a {
+  color: #999999;
+  transition: all 0.15s ease-in-out;
+}
+.footer-bottom__wrapper a:hover {
+  color: #ebebec;
 }
 
 .footer-menu {
@@ -963,6 +983,9 @@ ol li > a:hover {
 }
 .user-icon--login {
   background: url(../img/icons/lock.svg) no-repeat center;
+}
+.user-icon--user {
+  background: url(../img/icons/user.svg) no-repeat center;
 }
 .user-icon--fav {
   background: url(../img/icons/heart.svg) no-repeat center;
@@ -1686,6 +1709,9 @@ ol li > a:hover {
   font-size: 12px;
   color: #555;
   top: calc(50% - 0.75em);
+  border: none;
+  background: none;
+  padding: 0;
 }
 .form-row__link:hover {
   text-decoration: underline;
@@ -2458,11 +2484,6 @@ ol li > a:hover {
     flex-direction: row;
   }
 }
-@media screen and (min-width: 992px) {
-  .order-controls {
-    justify-content: flex-end;
-  }
-}
 
 .order-statuses {
   display: flex;
@@ -2712,29 +2733,6 @@ ol li > a:hover {
 .product a.product__color:hover {
   opacity: 0.8;
 }
-.product__sizes {
-  display: flex;
-  flex-wrap: wrap;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
-  row-gap: 10px;
-}
-.product__size {
-  border-radius: 0;
-  border: 1px solid #dddddd;
-  background: #fff;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 1.5;
-  padding: 7px 10px;
-  cursor: pointer;
-}
-.product__size:hover {
-  box-shadow: 0 2px 5px #dddddd;
-}
-.product__size.is-active {
-  border-color: #000;
-}
 .product__params {
   margin: 0;
   padding: 0;
@@ -2899,6 +2897,31 @@ ol li > a:hover {
 }
 .product-shares .product-share--fb {
   background: url(../img/social/fb.svg) no-repeat center/70%;
+}
+
+.product-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
+}
+
+.product-size {
+  border-radius: 0;
+  border: 1px solid #dddddd;
+  background: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+.product-size:hover {
+  box-shadow: 0 2px 5px #dddddd;
+}
+.product-size.is-active {
+  border-color: #000;
 }
 
 .pagination {
@@ -3388,7 +3411,7 @@ ol li > a:hover {
   z-index: 1;
 }
 
-.modal {
+.modals {
   display: none;
 }
 

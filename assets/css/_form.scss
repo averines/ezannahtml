@@ -42,6 +42,10 @@
         font-size: 12px;
         color: $text-d;
         top: calc(50% - 0.75em);
+        border: none;
+        background: none;
+        padding: 0;
+        
 
         &:hover {
             text-decoration: underline;

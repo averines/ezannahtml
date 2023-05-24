@@ -13,10 +13,23 @@
     font-size: 13px;
 
     &__wrapper {
-        height: 46px;
+        // height: 46px;
+        padding: 10px 0;
         display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 20px;
         align-items: center;
         justify-content: space-between;
+
+        a {
+            color: $text-l;
+            transition: $t;
+
+            &:hover {
+                color: $text-ll;
+            }
+        }
     }
 }
 

@@ -61,7 +61,7 @@
         <div class="header-main">
             <div class="container">
                 <div class="header-main__inner">
-                    <button class="header-btn" aria-label="Меню каталога"></button>
+                    <button class="header-btn" aria-label="Главное меню"></button>
 
                     <nav class="category-menu__wrapper">
                         <ul class="category-menu">
@@ -116,13 +116,15 @@
                         <div class="user-menu__item">
                             <button class="user-icon user-icon--search" aria-label="Искать"></button>
                         </div>
+
+                        <!-- для неавторизованного -->
+                        <div class="user-menu__item user-menu__item--hidden">
+                            <a class="user-icon user-icon--login" aria-label="Войти" href="user-login.html"></a>
+                        </div>
                         <div class="user-menu__item user-menu__item--hidden">
                             <a class="user-icon user-icon--fav" href="user-favorites.html" aria-label="Избранное">
                                 <span class="user-icon__counter">23</span>
                             </a>
-                        </div>
-                        <div class="user-menu__item user-menu__item--hidden">
-                            <a class="user-icon user-icon--login" aria-label="Войти" href="user-login.html"></a>
                         </div>
                         <div class="user-menu__item">
                             <a href="user-cart.html" class="user-icon user-icon--cart" aria-label="Корзина">
@@ -201,10 +203,13 @@
 
                 <form class="form form--sm py-2" action="">
                     <div class="form-row">
+                        <input type="text" placeholder="Фамилия" name="user-surname">
+                    </div>
+                    <div class="form-row">
                         <input type="text" placeholder="Имя" name="user-name">
                     </div>
                     <div class="form-row">
-                        <input type="text" placeholder="Фамилия" name="user-surname">
+                        <input type="text" placeholder="Отчество" name="user-patronymic">
                     </div>
                     <div class="form-row">
                         <input type="text" placeholder="Email" name="user-email">
@@ -217,6 +222,9 @@
                     </div>
                     <div class="form-row">
                         <input type="text" placeholder="Подтверждение пароля" name="user-password-check">
+                    </div>
+                    <div class="form-row">
+                        <p>Регистрация на сайте означает ваше согласие с&nbsp;<a href="info-privacy.html">обработкой персональных данных</a>.</p>
                     </div>
                     <div class="form-row">
                         <button type="submit" class="btn btn--full">Зарегистрироваться</button>
@@ -262,8 +270,8 @@
                         <div class="footer-col__content">
                             <div class="social-list">
                                 <a class="social-list__item social-list__item--vk" href="#" rel="nofollow noopener noreferrer" target="_blank" title="Вконтакте"></a>
-                                <a class="social-list__item social-list__item--ig" href="#" rel="nofollow noopener noreferrer" target="_blank" title="Инстаграм"></a>
-                                <a class="social-list__item social-list__item--fb" href="#" rel="nofollow noopener noreferrer" target="_blank" title="Фейсбук"></a>
+                                <!-- <a class="social-list__item social-list__item--ig" href="#" rel="nofollow noopener noreferrer" target="_blank" title="Инстаграм"></a>
+                                <a class="social-list__item social-list__item--fb" href="#" rel="nofollow noopener noreferrer" target="_blank" title="Фейсбук"></a> -->
                             </div>
                         </div>
                     </div>
@@ -279,7 +287,8 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="footer-bottom__wrapper">
-                    © Ezanna, 2023
+                    <div>© Ezanna, 2023</div>
+                    <a class="mr-auto" href="info-privacy.html">Политика обработки данных</a>
                     <img src="./assets/img/cards.svg" alt="Visa, MasterCard, МИР" loading="lazy" width="118" height="22">
                 </div>
             </div>

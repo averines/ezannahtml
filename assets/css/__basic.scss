@@ -33,6 +33,15 @@ textarea {
 	font-family: inherit;
 }
 
+button {
+	cursor: pointer;
+}
+
+textarea {
+	resize: vertical;
+	min-height: 150px;
+}
+
 .body-overlay {
 	overflow-y: hidden;
 	touch-action: none;
