@@ -1,4 +1,5 @@
 .filter {
+
     &__title {
         display: flex;
         justify-content: space-between;
@@ -22,6 +23,8 @@
         }
 
         &.is-collapsed {
+            // padding-bottom: 0;
+
             &::after {
                 transform: rotate(180deg);
             }

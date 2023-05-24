@@ -116,13 +116,15 @@
                         <div class="user-menu__item">
                             <button class="user-icon user-icon--search" aria-label="Искать"></button>
                         </div>
+                        
+                        <!-- для неавторизованного -->
+                        <div class="user-menu__item user-menu__item--hidden">
+                            <a class="user-icon user-icon--login" aria-label="Войти" href="user-login.html"></a>
+                        </div>
                         <div class="user-menu__item user-menu__item--hidden">
                             <a class="user-icon user-icon--fav" href="user-favorites.html" aria-label="Избранное">
                                 <span class="user-icon__counter">23</span>
                             </a>
-                        </div>
-                        <div class="user-menu__item user-menu__item--hidden">
-                            <a class="user-icon user-icon--login" aria-label="Войти" href="user-login.html"></a>
                         </div>
                         <div class="user-menu__item">
                             <a href="user-cart.html" class="user-icon user-icon--cart" aria-label="Корзина">

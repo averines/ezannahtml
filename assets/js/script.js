@@ -53,7 +53,13 @@ window.addEventListener('click', (e) => {
 
     if (e.target.classList.contains("category-menu-mobile__title")) {
         e.target.classList.toggle("is-active");
-    }    
+    }
+
+    if (e.target.dataset.action == "searchToggle") {
+        let search = document.getElementById("search");
+        search.classList.toggle("is-active");
+    }
+
 })
 
 window.addEventListener('resize', function () {

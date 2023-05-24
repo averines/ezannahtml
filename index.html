@@ -114,7 +114,7 @@
 
                     <div class="user-menu">
                         <div class="user-menu__item">
-                            <button class="user-icon user-icon--search" aria-label="Искать"></button>
+                            <button class="user-icon user-icon--search" aria-label="Искать" data-action="searchToggle"></button>
                         </div>
 
                         <!-- для неавторизованного -->
@@ -130,6 +130,57 @@
                             <a href="user-cart.html" class="user-icon user-icon--cart" aria-label="Корзина">
                                 <span class="user-icon__counter">23</span>
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search" id="search">
+                <div class="search__header">
+                    <div class="container">
+                        <input class="search__input" type="text" placeholder="Поиск по сайту">
+                        <button class="search__close btn-icon" aria-label="Закрыть поиск" data-action="searchToggle"><span class="icon icon--close"></span></button>
+                    </div>
+                </div>
+                <div class="search__result">
+                    <div class="container">
+                        <div class="search__title">Результаты поиска</div>
+                        <div class="search__cards product-cards">
+                            <div class="product-card">
+                                <a href="product.html" class="product-card__pic">
+                                    <img src="./i/products/z01.jpg" alt="худи 123" loading="lazy" height="517" width="345">
+                                </a>
+                                <div class="product-card__info">
+                                    <div class="product-card__badges">
+                                        <div class="product-card__badge">Хит</div>
+                                    </div>
+                                    <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                    <div class="product-card__price">2280&nbsp;₽</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <a href="product.html" class="product-card__pic">
+                                    <img src="./i/products/z01.jpg" alt="худи 123" loading="lazy" height="517" width="345">
+                                </a>
+                                <div class="product-card__info">
+                                    <div class="product-card__badges">
+                                        <div class="product-card__badge">Хит</div>
+                                    </div>
+                                    <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                    <div class="product-card__price">2280&nbsp;₽</div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <a href="product.html" class="product-card__pic">
+                                    <img src="./i/products/z01.jpg" alt="худи 123" loading="lazy" height="517" width="345">
+                                </a>
+                                <div class="product-card__info">
+                                    <div class="product-card__badges">
+                                        <div class="product-card__badge">Хит</div>
+                                    </div>
+                                    <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                    <div class="product-card__price">2280&nbsp;₽</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
