@@ -98,7 +98,24 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 
-const container = document.getElementById("sliderMain");
-const options = { infinite: false };
+const sliderMain = document.getElementById("sliderMain");
+if (sliderMain) {
+    new Carousel(sliderMain, { infinite: false });
+}
 
-new Carousel(container, options);
+
+// выбор самовывоза
+let deliveryInputs = document.querySelectorAll('input[name="delivery"]');
+if (deliveryInputs) {
+    let pickupElements = document.querySelectorAll('[data-action="isPickup"]');
+
+    deliveryInputs.forEach(deliveryInput => {
+        deliveryInput.addEventListener("change", (e) => {
+            if (e.target.value == "delivery-0") {
+                pickupElements.forEach(i => i.classList.remove("is-hidden"));
+            } else {
+                pickupElements.forEach(i => i.classList.add("is-hidden"));
+            }
+        })
+    })
+}

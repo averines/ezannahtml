@@ -285,37 +285,6 @@ ol {
 	height: 400px;
 }
 
-.d-flex {
-	display: flex;
-}
-
-.flex-wrap {
-	flex-wrap: wrap;
-}
-
-.d-block {
-	display: block;
-}
-
-.d-inline-block {
-	display: inline-block;
-}
-
-.d-inline {
-	display: inline !important;
-}
-
-.d-inline-flex {
-	display: inline-flex !important;
-}
-
-.flex-column {
-	flex-direction: column;
-}
-
-.is-hidden {
-	display: none;
-}
 
 .fancybox__slide {
 	@media screen and (min-width: 1024px) {
@@ -351,7 +320,6 @@ ol {
 	color: rgb(55, 90, 245);
 }
 
-
 .f-carousel {
 	--f-carousel-dot-width: 6px;
 	--f-carousel-dot-height: 6px;
@@ -362,3 +330,5 @@ ol {
 		bottom: 0;
 	}
 }
+
+

@@ -16,19 +16,27 @@
         > .container {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            column-gap: 10px;
         }
     }
 
     &__input {
         width: 100%;
         font-size: 16px;
-        padding: 10px 20px 10px 0;
+        padding: 15px 20px 15px 45px;
         border: none;
         text-transform: uppercase;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
         letter-spacing: $ls;
-        background-color: $bg-ll;
+        background: url(../img/icons/search.svg) no-repeat left 10px center #fff;
+        transition: $t;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 2px $line-d;
+        }
     }
 
     &__result {
@@ -42,6 +50,14 @@
         font-weight: 500;
         border-bottom: 1px solid $line-d;
         padding-bottom: 10px;
+
+        > span {
+            color: $text-l;
+        }
+    }
+
+    &__content {
+        color: $text-l;
     }
 }
 

@@ -9,7 +9,7 @@
     <meta name="description" content="Качественная российская женская, мужская и детская одежда по индивидуальным размерам. Оплата на сайте, доставка во все регионы.">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="./assets/libs/fancybox/fancybox/fancybox.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.min.css">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon.png">
 </head>
 
@@ -109,7 +109,7 @@
                     </nav>
 
                     <a class="header-logo" href="index.html" aria-label="Интернет магазин одежды EZANNA">
-                        <img src="./assets/img/logo-s.png" srcset="./assets/img/logo.png 992w, ./assets/img/logo.svg 1200w" alt="EZANNA">
+                        <img src="./assets/img/logo.png" srcset="./assets/img/logo.png 992w, ./assets/img/logo.svg 1200w" alt="EZANNA">
                     </a>
 
                     <div class="user-menu">
@@ -314,17 +314,17 @@
                                     <div class="form-row">
                                         <div class="form-group">
                                             <div class="form-group__label">Фамилия</div>
-                                            <input type="text" class="form-group__input" placeholder="Ваша фамилия">
+                                            <input type="text" class="form-group__input">
                                         </div>
                                         <div class="form-group">
                                             <div class="form-group__label">Имя</div>
-                                            <input type="text" class="form-group__input" placeholder="Ваше имя">
+                                            <input type="text" class="form-group__input">
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group">
                                             <div class="form-group__label">Отчество</div>
-                                            <input type="text" class="form-group__input" placeholder="Ваше отчество">
+                                            <input type="text" class="form-group__input">
                                         </div>
                                     </div>
                                     <div class="form-row">
@@ -339,24 +339,28 @@
                                             <input type="text" class="form-group__input" placeholder="+7 (___) ___-__-__">
                                         </div>
                                     </div>
-                                    <div class="form-row">
+                                    <div class="form-row" data-action="isPickup">
                                         <div class="form-group">
                                             <div class="form-group__label">Адрес доставки</div>
-                                            <input type="text" class="form-group__input" placeholder="Россия, Московская область, г. Подольск, ул. Речная, д. 2">
+                                            <input type="text" class="form-group__input is-error" placeholder="Россия, Московская область, г. Подольск, ул. Речная, д. 2">
                                         </div>
                                     </div>
+                                    <p>Все поля обязательны для заполнения.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="order-detail">
-                            <div class="order-detail__title">Способы доставки</div>
+                            <div class="order-detail__title">Способы получения заказа</div>
                             <div class="order-detail__content">
                                 <div class="form">
-                                    <p class="mt-0">Доставка до вашего города оплачивается отдельно, согласно тарифам почтовой организации. Будет выставлен отдельный счет на&nbsp;доставку.</p>
                                     <div class="form-row">
                                         <div class="form-radio">
                                             <div class="form-radio__group">
-                                                <input type="radio" name="delivery" id="delivery-1" checked>
+                                                <input type="radio" name="delivery" id="delivery-0" checked value="delivery-0">
+                                                <label for="delivery-0">Самовывоз</label>
+                                            </div>
+                                            <div class="form-radio__group">
+                                                <input type="radio" name="delivery" id="delivery-1">
                                                 <label for="delivery-1">EMS</label>
                                             </div>
                                             <div class="form-radio__group"><input type="radio" name="delivery" id="delivery-2">
@@ -372,7 +376,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-row mt-2">
+                                    <p class="mt-0">Доставка до вашего города оплачивается отдельно, согласно тарифам почтовой организации. Будет выставлен отдельный счет на&nbsp;доставку.</p>
+                                    <div class="form-row">
                                         <div class="form-group">
                                             <div class="form-group__label">Комментарий к заказу или доставке</div>
                                             <textarea></textarea>
@@ -387,7 +392,7 @@
                                 <div class="form">
                                     <div class="form-row">
                                         <div class="form-radio">
-                                            <div class="form-radio__group">
+                                            <div class="form-radio__group" data-action="isPickup">
                                                 <input type="radio" name="payment" id="payment-1" checked>
                                                 <label for="payment-1">Оплата наличными или&nbsp;картой при&nbsp;получении заказа в&nbsp;офисе</label>
                                             </div>
