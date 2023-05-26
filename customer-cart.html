@@ -269,31 +269,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="order-product">
-                            <div class="order-product__controls">
-                                <button class="order-product__control">Удалить</button>
-                            </div>
-                            <div class="order-product__content">
-                                <a class="order-product__pic" href="product.html">
-                                    <img src="./i/products/z01.jpg" alt="Брюки 112548" loading="lazy" height="206" width="138">
-                                </a>
-                                <div class="order-product__info">
-                                    <div class="order-product__title">Брюки</div>
-                                    <div class="order-product__details">
-                                        <div>Арт: 112548</div>
-                                        <div>Цвет: Дымная ваниль</div>
-                                        <div>Размер: 44/176</div>
-                                        <div><button data-fancybox data-type="ajax" data-src="modal-product-size.html">Изменить размер</button></div>
-                                    </div>
-                                    <div class="order-product__price order-product__price--discount">2280&nbsp;₽ <span>3520&nbsp;₽</span></div>
-                                    <div class="order-product__counter">
-                                        <button>–</button>
-                                        <input type="text" value="3">
-                                        <button>+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="order-total">
                         <div class="order-promocode">
@@ -343,12 +318,16 @@
                                             <input type="text" class="form-group__input" placeholder="+7 (___) ___-__-__">
                                         </div>
                                     </div>
-                                    <div class="form-row">
+
+                                    <!-- скрываем это поле при выборе Самовывоз -->
+                                    <div class="form-row" data-action="isPickupHidden">
                                         <div class="form-group">
                                             <div class="form-group__label">Адрес доставки</div>
-                                            <input type="text" class="form-group__input" placeholder="Россия, Московская область, г. Подольск, ул. Речная, д. ">
+                                            <!-- при необходимости показываем ошибку при заполнении поля через добавление css класса is-error -->
+                                            <input type="text" class="form-group__input is-error" placeholder="Россия, Московская область, г. Подольск, ул. Речная, д. ">
                                         </div>
                                     </div>
+                                    <p>Все поля обязательны для заполнения.</p>
                                 </div>
                             </div>
                         </div>
@@ -356,9 +335,12 @@
                             <div class="order-detail__title">Способы доставки</div>
                             <div class="order-detail__content">
                                 <div class="form">
-                                    <p class="mt-0">Доставка до вашего города оплачивается отдельно, согласно тарифам почтовой организации. Будет выставлен отдельный счет на&nbsp;доставку.</p>
                                     <div class="form-row">
                                         <div class="form-radio">
+                                            <div class="form-radio__group">
+                                                <input type="radio" name="delivery" id="delivery-0" checked value="delivery-0">
+                                                <label for="delivery-0">Самовывоз</label>
+                                            </div>
                                             <div class="form-radio__group">
                                                 <input type="radio" name="delivery" id="delivery-1" checked>
                                                 <label for="delivery-1">EMS</label>
@@ -376,7 +358,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-row mt-2">
+                                    <p class="mt-0">Доставка до вашего города оплачивается отдельно, согласно тарифам почтовой организации. Будет выставлен отдельный счет на&nbsp;доставку.</p>
+                                    <div class="form-row">
                                         <div class="form-group">
                                             <div class="form-group__label">Комментарий к заказу или доставке</div>
                                             <textarea></textarea>
@@ -391,12 +374,13 @@
                                 <div class="form">
                                     <div class="form-row">
                                         <div class="form-radio">
-                                            <div class="form-radio__group">
-                                                <input type="radio" name="payment" id="payment-1" checked>
+                                            <!-- показываем это поле при выборе Самовывоза -->
+                                            <div class="form-radio__group is-hidden" data-action="isPickupShow">
+                                                <input type="radio" name="payment" id="payment-1">
                                                 <label for="payment-1">Оплата наличными или&nbsp;картой при&nbsp;получении заказа в&nbsp;офисе</label>
                                             </div>
                                             <div class="form-radio__group">
-                                                <input type="radio" name="payment" id="payment-2">
+                                                <input type="radio" name="payment" id="payment-2" checked>
                                                 <label for="payment-2">Оплата картой без процентов на сайте</label>
                                             </div>
                                         </div>

@@ -61,60 +61,58 @@ window.addEventListener('click', (e) => {
         search.classList.toggle("is-active");
     }
 
+    // плавный переход к нужному фото товара при клике на превьюшку (на странице товара)
+    if (e.target.closest("a").classList.contains("product-slider__thumb")) {
+        e.stopPropagation();
+        e.preventDefault();
+        const productThumbs = document.querySelectorAll('.product-slider__thumb');
+        const productThumb = e.target.closest("a");
+        productThumbs.forEach(p => p.classList.remove("is-active"));
+        productThumb.classList.add("is-active")
+
+        let blockID = productThumb.getAttribute('href').slice(1);
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+
+    }
 })
 
 
 window.addEventListener('resize', function () {
+    // скрываем  ранее показанные элементы при достижении ширины окна
     if (window.innerWidth > 992) {
         body.classList.remove("body-overflow");
         if (catalogFilter) { catalogFilter.classList.remove("is-active") }
         if (headerMobile) { headerMobile.classList.remove("is-active"); }
-
     };
 });
 
 
-const productThumbs = document.querySelectorAll('.product-slider__thumb')
-if (productThumbs) {
-    productThumbs.forEach(productThumb => {
-        productThumb.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            productThumbs.forEach(p => p.classList.remove("is-active"));
-            productThumb.classList.add("is-active")
-
-            let blockID = productThumb.getAttribute('href').slice(1);
-            document.getElementById(blockID).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            })
-        })
-    })
-}
+// всплывающие окна через фансибокс
+Fancybox.bind("[data-fancybox]", {});
 
 
-Fancybox.bind("[data-fancybox]", {
-    // Your custom options
-});
-
-
+// слайдер через фансибокс
 const sliderMain = document.getElementById("sliderMain");
-if (sliderMain) {
-    new Carousel(sliderMain, { infinite: false });
-}
+if (sliderMain) { new Carousel(sliderMain, { infinite: false }) }
 
 
 // выбор самовывоза
 let deliveryInputs = document.querySelectorAll('input[name="delivery"]');
 if (deliveryInputs) {
-    let pickupElements = document.querySelectorAll('[data-action="isPickup"]');
+    let pickupShowElements = document.querySelectorAll('[data-action="isPickupShow"]');
+    let pickupHiddenElements = document.querySelectorAll('[data-action="isPickupHidden"]');
 
     deliveryInputs.forEach(deliveryInput => {
         deliveryInput.addEventListener("change", (e) => {
             if (e.target.value == "delivery-0") {
-                pickupElements.forEach(i => i.classList.remove("is-hidden"));
+                pickupShowElements.forEach(i => i.classList.remove("is-hidden"));
+                pickupHiddenElements.forEach(i => i.classList.add("is-hidden"));
             } else {
-                pickupElements.forEach(i => i.classList.add("is-hidden"));
+                pickupShowElements.forEach(i => i.classList.add("is-hidden"));
+                pickupHiddenElements.forEach(i => i.classList.remove("is-hidden"));
             }
         })
     })
