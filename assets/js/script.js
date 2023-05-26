@@ -104,7 +104,6 @@ let deliveryInputs = document.querySelectorAll('input[name="delivery"]');
 if (deliveryInputs) {
     let pickupShowElements = document.querySelectorAll('[data-action="isPickupShow"]');
     let pickupHiddenElements = document.querySelectorAll('[data-action="isPickupHidden"]');
-
     deliveryInputs.forEach(deliveryInput => {
         deliveryInput.addEventListener("change", (e) => {
             if (e.target.value == "delivery-0") {
