@@ -7,6 +7,10 @@
     width: 90%;
     margin: 0 auto;
 
+    &--xsm {
+        max-width: 400px;
+    }
+
     &--sm {
         max-width: 600px;
     }
@@ -14,10 +18,10 @@
     &--md {
         max-width: 1000px;
     }
-    
+
     &--lg {
         max-width: 1400px;
-    }     
+    }
 
     &__title {
         font-weight: 500;

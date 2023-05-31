@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" prefix="og: http://ogp.me/ns#" id="html">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Интернет магазин одежды EZANNA</title>
+    <title>Интернет-магазин одежды EZANNA</title>
     <meta name="description" content="Качественная российская женская, мужская и детская одежда по индивидуальным размерам. Оплата на сайте, доставка во все регионы.">
     <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:title" content="Интернет-магазин одежды EZANNA">
+    <meta property="og:description" content="Качественная российская женская, мужская и детская одежда по индивидуальным размерам. Оплата на сайте, доставка во все регионы.">
+    <meta property="og:url" content="https://ezanna.ru">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ezanna.ru">
+    <meta property="og:image" content="https://ezanna.ru/img/og.png">
+    <meta property="og:image:secure_url" content="https://ezanna.ru/img/og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
     <link rel="stylesheet" href="./assets/libs/fancybox/fancybox/fancybox.css">
+    <link rel="stylesheet" href="./assets/libs/fancybox/carousel/carousel.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
 </head>
+
 
 <body>
     <header>
@@ -36,7 +52,7 @@
                     "logo" : "https://ezanna.ru/assets/img/logo.png",
                     "image" : "https://ezanna.ru/assets/img/office.jpg"
                 }
-        </script>
+            </script>
         <div class="header-top">
             <div class="container">
                 <div class="header-top__inner">
@@ -46,13 +62,14 @@
                             <li class="header-menu__item" role="menuitem"><a href="info-contacts.html">Контакты</a></li>
                             <li class="header-menu__item" role="menuitem"><a href="info-payment.html">Оплата</a></li>
                             <li class="header-menu__item" role="menuitem"><a href="info-delivery.html">Доставка</a></li>
+                            <li class="header-menu__item" role="menuitem"><a href="info-wholesale.html">Оптом</a></li>
                         </ul>
                     </nav>
                     <div class="header-contacts">
                         <ul class="header-menu">
                             <li class="header-menu__item header-menu__item--hidden"><a href="tel:+74996088925">8 (499) 608-89-25</a></li>
                             <li class="header-menu__item"><a href="tel:+78003012575">8 (800) 301-25-75</a></li>
-                            <li class="header-menu__item"><button>Заказать звонок</button></li>
+                            <!-- <li class="header-menu__item"><button data-fancybox data-type="ajax" data-src="modal-callback.html">Заказать звонок</button></li> -->
                         </ul>
                     </div>
                 </div>
@@ -61,7 +78,7 @@
         <div class="header-main">
             <div class="container">
                 <div class="header-main__inner">
-                    <button class="header-btn" aria-label="Главное меню"></button>
+                    <button class="header-btn" aria-label="Показать меню"></button>
 
                     <nav class="category-menu__wrapper">
                         <ul class="category-menu">
@@ -114,7 +131,7 @@
 
                     <div class="user-menu">
                         <div class="user-menu__item">
-                            <button class="user-icon user-icon--search" aria-label="Искать"></button>
+                            <button class="user-icon user-icon--search" aria-label="Искать" data-action="searchToggle"></button>
                         </div>
 
                         <!-- для неавторизованного -->
@@ -131,6 +148,78 @@
                                 <span class="user-icon__counter">23</span>
                             </a>
                         </div>
+
+                        <!-- для авторизованного -->
+                        <!-- <div class="user-menu__item user-menu__item--hidden">
+                                <a class="user-icon user-icon--user" href="customer-data.html" aria-label="Личный кабинет"></a>
+                            </div>
+                            <div class="user-menu__item user-menu__item--hidden">
+                                <a class="user-icon user-icon--fav" href="customer-favorites.html" aria-label="Избранное">
+                                    <span class="user-icon__counter">23</span>
+                                </a>
+                            </div>
+                            <div class="user-menu__item">
+                                <a class="user-icon user-icon--cart" href="customer-cart.html" aria-label="Корзина">
+                                    <span class="user-icon__counter">7</span>
+                                </a>
+                            </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="search" id="search">
+                <div class="search__header">
+                    <div class="container">
+                        <input class="search__input" type="text" placeholder="Я ищу...">
+                        <button class="search__close btn-icon" aria-label="Закрыть поиск" data-action="searchToggle"><span class="icon icon--close"></span></button>
+                    </div>
+                </div>
+                <div class="search__result">
+                    <div class="container">
+                        <div class="search__title">Результаты поиска <span>(3)</span></div>
+                        <div class="search__content">
+                            <!-- нет результатов -->
+                            <p>Нет результатов</p>
+
+                            <!-- есть результаты -->
+                            <div class="search__cards product-cards">
+                                <div class="product-card">
+                                    <a href="product.html" class="product-card__pic">
+                                        <img src="./i/products/z01.jpg" alt="худи 123" loading="lazy" height="517" width="345">
+                                    </a>
+                                    <div class="product-card__info">
+                                        <div class="product-card__badges">
+                                            <div class="product-card__badge">Хит</div>
+                                        </div>
+                                        <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                        <div class="product-card__price">2280&nbsp;₽</div>
+                                    </div>
+                                </div>
+                                <div class="product-card">
+                                    <a href="product.html" class="product-card__pic">
+                                        <img src="./i/products/z01.jpg" alt="худи 123" loading="lazy" height="517" width="345">
+                                    </a>
+                                    <div class="product-card__info">
+                                        <div class="product-card__badges">
+                                            <div class="product-card__badge">Хит</div>
+                                        </div>
+                                        <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                        <div class="product-card__price">2280&nbsp;₽</div>
+                                    </div>
+                                </div>
+                                <div class="product-card">
+                                    <a href="product.html" class="product-card__pic">
+                                        <img src="./i/products/z01.jpg" alt="худи 123" loading="lazy" height="517" width="345">
+                                    </a>
+                                    <div class="product-card__info">
+                                        <div class="product-card__badges">
+                                            <div class="product-card__badge">Хит</div>
+                                        </div>
+                                        <a class="product-card__title" href="product.html">Костюм (шорты и свитшот)</a>
+                                        <div class="product-card__price">2280&nbsp;₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -138,7 +227,6 @@
         <div class="header-mobile">
             <div class="header-mobile__inner">
                 <button class="btn-icon header-mobile__btn" title="Закрыть меню" data-action="closeHeaderMobile"><span class="icon icon--close"></span></button>
-
                 <nav aria-label="Каталог">
                     <div class="category-menu-mobile">
                         <div class="category-menu-mobile__title">Женщинам</div>
@@ -177,10 +265,17 @@
                 </nav>
                 <hr class="my-2 invert">
                 <nav aria-label="Пользователь">
+                    <!-- для неавторизованного -->
                     <ul class="header-menu header-menu--mobile" role="menubar">
-                        <li class="header-menu__item" role="menuitem"><a href="user-login.html">Личный кабинет</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="user-login.html">Вход/регистрация</a></li>
                         <li class="header-menu__item" role="menuitem"><a href="user-favorites.html">Избранное</a></li>
                     </ul>
+
+                    <!-- для авторизованного -->
+                    <!-- <ul class="header-menu header-menu--mobile" role="menubar">
+                            <li class="header-menu__item" role="menuitem"><a href="customer-data.html">Личный кабинет</a></li>
+                            <li class="header-menu__item" role="menuitem"><a href="customer-favorites.html">Избранное</a></li>
+                        </ul> -->
                 </nav>
                 <hr class="my-2 invert">
                 <nav aria-label="Информация">
@@ -189,6 +284,7 @@
                         <li class="header-menu__item" role="menuitem"><a href="info-contacts.html">Контакты</a></li>
                         <li class="header-menu__item" role="menuitem"><a href="info-payment.html">Оплата</a></li>
                         <li class="header-menu__item" role="menuitem"><a href="info-delivery.html">Доставка</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="info-wholesale.html">Оптом</a></li>
                     </ul>
                 </nav>
             </div>
@@ -250,6 +346,7 @@
                         </div>
                         <div class="footer-col__content">Россия&nbsp;/ Москва&nbsp;/ ул.&nbsp;Вольная&nbsp;/ д.35,&nbsp;стр.8</div>
                     </div>
+                    <!--
                     <div class="footer-col">
                         <div class="footer-col__title">
                             <div class="icon icon--share"></div>Соцсети
@@ -257,11 +354,12 @@
                         <div class="footer-col__content">
                             <div class="social-list">
                                 <a class="social-list__item social-list__item--vk" href="#" rel="nofollow noopener noreferrer" target="_blank" title="Вконтакте"></a>
-                                <!-- <a class="social-list__item social-list__item--ig" href="#" rel="nofollow noopener noreferrer" target="_blank" title="Инстаграм"></a>
-                                <a class="social-list__item social-list__item--fb" href="#" rel="nofollow noopener noreferrer" target="_blank" title="Фейсбук"></a> -->
+                                <a class="social-list__item social-list__item--ig" href="#" rel="nofollow noopener noreferrer" target="_blank" title="Инстаграм"></a>
+                                <a class="social-list__item social-list__item--fb" href="#" rel="nofollow noopener noreferrer" target="_blank" title="Фейсбук"></a>
                             </div>
                         </div>
                     </div>
+                    -->
                     <div class="footer-col">
                         <div class="footer-col__title">
                             <img src="./assets/img/logo.svg" alt="Ezanna.ru" loading="lazy" width="167" height="70">
@@ -275,8 +373,8 @@
             <div class="container">
                 <div class="footer-bottom__wrapper">
                     <div>© Ezanna, 2023</div>
-                    <a class="mr-auto" href="info-privacy.html">Политика обработки данных</a>
-                    <img src="./assets/img/cards.svg" alt="Visa, MasterCard, МИР" loading="lazy" width="118" height="22">
+                    <a href="info-privacy.html">Политика обработки данных</a>
+                    <!-- <img src="./assets/img/cards.svg" alt="Visa, MasterCard, МИР" loading="lazy" width="118" height="22"> -->
                 </div>
             </div>
         </div>

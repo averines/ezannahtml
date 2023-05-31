@@ -207,6 +207,16 @@ p {
 	max-width: 700px;
 }
 
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+.img-max {
+	width: 100%;
+	min-height: auto;
+}
+
 hr {
 	height: 0;
 	border: none;
@@ -285,7 +295,6 @@ ol {
 	height: 400px;
 }
 
-
 .fancybox__slide {
 	@media screen and (min-width: 1024px) {
 		padding: 20px;
@@ -331,4 +340,25 @@ ol {
 	}
 }
 
+.img-error {
+	position: relative;
+	opacity: 0.7;
+	max-width: 450px;
+	margin: 30px auto;
 
+	&::after {
+		content: "";
+		width: 100%;
+		display: block;
+		height: 70%;
+		position: absolute;
+		bottom: 0;
+		background: linear-gradient(transparent, $body);
+	}
+}
+
+
+.alert {
+	background-color: $bg-l;
+	padding: 0.5em 1.5em;
+}

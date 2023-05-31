@@ -122,9 +122,12 @@
     &__badges {
         display: flex;
         column-gap: 2px;
+        row-gap: 1px;
         align-items: flex-start;
+        flex-wrap: wrap;
         position: absolute;
-        top: -18px;
+        top: 0;
+        transform: translateY(-100%);
     }
 
     &__badge {
@@ -135,6 +138,16 @@
         letter-spacing: $ls;
         background-color: $special-2;
         padding: 0.3em 0.55em;
+        pointer-events: none;
+        user-select: none;
+
+        &--accent {
+            background-color: $special-3;
+        }
+
+        &--dark {
+            background-color: $text;
+        }
     }
 
     &__title {
