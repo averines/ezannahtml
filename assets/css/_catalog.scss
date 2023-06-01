@@ -15,7 +15,7 @@
 			content: "";
 			display: block;
 			position: fixed;
-			z-index: 100;
+			z-index: 1002;
 			background-color: rgba(61, 61, 60, 0.5);
 			top: 0;
 			left: 0;
@@ -38,12 +38,16 @@
 	right: 0;
 	top: 0;
 	background-color: #fff;
-	z-index: 999;
+	z-index: 1002;
 	visibility: hidden;
 	pointer-events: none;
 	opacity: 0;
 	transform: translateX(50px);
 	transition: transform 0.25s ease-in-out;
+
+	@media screen and (min-width: 992px) {
+		z-index: 999;
+	}
 
 	&::-webkit-scrollbar {
 		width: 10px;
