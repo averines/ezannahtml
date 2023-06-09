@@ -28,31 +28,30 @@
     <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
 </head>
 
-
 <body>
     <header>
         <script type="application/ld+json">
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "Organization",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "addressCountry": "RU",
-                            "addressLocality": "г. Москва, Россия",
-                            "postalCode": "105187",
-                            "streetAddress": "ул. Вольная, д. 35, стр. 8"
-                        },
-                        "url": "https://ezanna.ru/",
-                        "email": "potapova@optmoyo.ru",
-                        "name": "Ezanna",
-                        "alternateName": "Эзанна",
-                        "telephone": "8 (800) 301-25-75",
-                        "description": "Интернет-магазин одежды. Женская, мужская и детская одежда для любого возраста.",
-                        "sameAs": ["https://optmoyo.ru/zhen/catalog/ezanna"],
-                        "logo" : "https://ezanna.ru/assets/img/logo.png",
-                        "image" : "https://ezanna.ru/assets/img/office.jpg"
-                    }
-                </script>
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "RU",
+                    "addressLocality": "г. Москва, Россия",
+                    "postalCode": "105187",
+                    "streetAddress": "ул. Вольная, д. 35, стр. 8"
+                },
+                "url": "https://ezanna.ru/",
+                "email": "potapova@optmoyo.ru",
+                "name": "Ezanna",
+                "alternateName": "Эзанна",
+                "telephone": "8 (800) 301-25-75",
+                "description": "Интернет-магазин одежды. Женская, мужская и детская одежда для любого возраста.",
+                "sameAs": ["https://optmoyo.ru/zhen/catalog/ezanna"],
+                "logo" : "https://ezanna.ru/assets/img/logo.png",
+                "image" : "https://ezanna.ru/assets/img/office.jpg"
+            }
+        </script>
         <div class="header-top">
             <div class="container">
                 <div class="header-top__inner">
@@ -225,8 +224,10 @@
 
                     <!-- для авторизованного -->
                     <ul class="header-menu header-menu--mobile" role="menubar">
-                        <li class="header-menu__item" role="menuitem"><a href="customer-data.html">Личный кабинет</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="customer-data.html">Данные покупателя</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="customer-orders.html">История заказов</a></li>
                         <li class="header-menu__item" role="menuitem"><a href="customer-favorites.html">Избранное</a></li>
+                        <li class="header-menu__item" role="menuitem"><a href="#">Выйти из аккаунта</a></li>
                     </ul>
                 </nav>
                 <hr class="my-2 invert">
@@ -294,6 +295,7 @@
                         <button class="data-row__btn" data-fancybox data-src="#modal-password">Изменить</button>
                     </div>
                 </div>
+                <a class="btn mt-3" href="#">Выйти из аккаунта</a>
             </div>
         </div>
     </main>
