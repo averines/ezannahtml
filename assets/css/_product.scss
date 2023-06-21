@@ -265,10 +265,6 @@
         top: 20px;
         margin-top: 20px;
 
-        img {
-            display: block;
-        }
-
         @media screen and (min-width: 700px) {
             display: flex;
             flex-direction: column;
@@ -291,10 +287,19 @@
                 opacity: 1;
             }
         }
+
+        > picture {
+            pointer-events: none;
+            display: block;
+
+            > img {
+                pointer-events: none;
+                display: block;
+            }
+        }
     }
 
     &__content {
-        // border: 1px solid blue;
         display: flex;
         flex-direction: column;
         position: sticky;
@@ -364,6 +369,7 @@
             }
 
             &::after {
+                pointer-events: none;
                 transition: $t;
                 content: "";
                 display: block;

@@ -37,7 +37,6 @@
     display: block;
     width: 132px;
     height: 55px;
-    // background: url(../img/logo.svg) no-repeat center/100%;
     margin: 0 auto 2px auto;
     z-index: 1;
     position: relative;
@@ -74,24 +73,24 @@
     @media screen and (min-width: 992px) {
         position: absolute;
         margin: 0 auto;
-        width: 200px;
-        height: 70px;
-        left: calc(50% - 20px);
-        top: -40px;
+        width: 180px;
+        height: 60px;
+        left: calc(50% - 30px);
+        top: -50px;
         z-index: 10;
         background-color: $body;
         background-size: 100%;
         transition: $t;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1160px) {
         width: 220px;
         height: 75px;
         left: calc(50% - 50px);
         top: -45px;
     }
 
-    @media screen and (min-width: 1300px) {
+    @media screen and (min-width: 1400px) {
         width: 260px;
         height: 85px;
         left: calc(50% - 130px);

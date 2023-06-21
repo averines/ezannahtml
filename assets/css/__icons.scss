@@ -1,6 +1,7 @@
 .icon {
     width: 21px;
     height: 21px;
+    pointer-events: none;
 
     &--map {
         background: url(../img/icons/map.svg) no-repeat center/100%;

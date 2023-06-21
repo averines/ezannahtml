@@ -3,6 +3,10 @@
     align-items: center;
     margin: 0 auto 0 calc(50% - 290px);
 
+    &--center {
+        margin: 0 auto;
+    }
+
     &__btn {
         color: $text;
         text-decoration: none;

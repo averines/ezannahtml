@@ -26,15 +26,19 @@
         will-change: padding;
 
         @media screen and (min-width: 992px) {
-            padding: 0 10px;
+            padding: 0 7px;
         }
 
         @media screen and (min-width: 1100px) {
-            padding: 0 15px;
+            padding: 0 7px;
         }
 
         @media screen and (min-width: 1400px) {
-            padding: 0 20px;
+            padding: 0 10px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            padding: 0 15px;
         }
 
         &:first-child {

@@ -4,13 +4,8 @@ let headerMobile = document.querySelector(".header-mobile");
 
 
 window.addEventListener('click', (e) => {
-    if (e.target.closest(".product-section") && e.target.closest(".product-section").classList.contains("product-section--collapsible")) {
-        let section = e.target.closest(".product-section");
-        let title = section.querySelector(".product-section__title");
-
-        if (e.target.classList.contains("product-section__title") || e.target.closest(".product-section__title")) {
-            title.classList.toggle("is-active");
-        }
+    if (e.target.classList.contains("product-section__title") && e.target.closest(".product-section--collapsible")) {
+        e.target.classList.toggle("is-active");
     }
 
     if (e.target.classList.contains("filter__title")) {
@@ -30,7 +25,7 @@ window.addEventListener('click', (e) => {
         catalogFilter.classList.toggle("is-active");
     }
 
-    if (e.target.closest("button") && e.target.closest("button").dataset.action == "closeCatalogFilter" || e.target.classList.contains('catalog')) {
+    if (e.target.dataset.action == "closeCatalogFilter" || e.target.classList.contains('catalog')) {
         body.classList.remove("body-overflow");
         catalogFilter.classList.remove("is-active");
     }
@@ -47,7 +42,7 @@ window.addEventListener('click', (e) => {
         headerMobile.classList.toggle("is-active");
     }
 
-    if (e.target.closest("button") && e.target.closest("button").dataset.action == "closeHeaderMobile" || e.target.classList.contains("header-mobile")) {
+    if (e.target.dataset.action == "closeHeaderMobile" || e.target.classList.contains("header-mobile")) {
         body.classList.remove("body-overflow");
         headerMobile.classList.remove("is-active");
     }
@@ -62,20 +57,18 @@ window.addEventListener('click', (e) => {
     }
 
     // плавный переход к нужному фото товара при клике на превьюшку (на странице товара)
-    if (e.target.closest("a").classList.contains("product-slider__thumb")) {
+    if (e.target.classList.contains("product-slider__thumb")) {
         e.stopPropagation();
         e.preventDefault();
-        const productThumbs = document.querySelectorAll('.product-slider__thumb');
-        const productThumb = e.target.closest("a");
+        let productThumbs = document.querySelectorAll('.product-slider__thumb');
         productThumbs.forEach(p => p.classList.remove("is-active"));
-        productThumb.classList.add("is-active")
+        e.target.classList.add("is-active");
 
-        let blockID = productThumb.getAttribute('href').slice(1);
-        document.getElementById(blockID).scrollIntoView({
+        let productPictureID = e.target.getAttribute('href').slice(1);
+        document.getElementById(productPictureID).scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         })
-
     }
 })
 
@@ -105,7 +98,7 @@ if (deliveryInputs) {
     let pickupShowElements = document.querySelectorAll('[data-action="isPickupShow"]');
     let pickupHiddenElements = document.querySelectorAll('[data-action="isPickupHidden"]');
 
-    
+
     deliveryInputs.forEach(deliveryInput => {
         deliveryInput.addEventListener("change", (e) => {
             if (e.target.value == "delivery-0") {
