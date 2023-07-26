@@ -86,8 +86,6 @@
                 color: $main-h;
                 border-bottom-color: transparent;
             }
-
-
         }
     }
 
@@ -156,6 +154,7 @@
         flex-wrap: wrap;
         border: 1px solid $line-d;
         padding: 1px;
+        align-self: flex-start;
 
         > button {
             border: 1px solid transparent;
@@ -165,7 +164,9 @@
             font-weight: 500;
             font-size: 15px;
             cursor: pointer;
-            transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+            transition:
+                background-color 0.1s ease-in-out,
+                border-color 0.1s ease-in-out;
 
             &:hover {
                 background-color: $bg-l;
@@ -185,9 +186,16 @@
             text-align: center;
             background: none;
             font-weight: 500;
+            appearance: none;
 
             &:focus {
                 outline: 1px solid $text;
+            }
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
             }
         }
     }

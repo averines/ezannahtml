@@ -58,17 +58,19 @@ window.addEventListener('click', (e) => {
 
     // плавный переход к нужному фото товара при клике на превьюшку (на странице товара)
     if (e.target.classList.contains("product-slider__thumb")) {
-        e.stopPropagation();
-        e.preventDefault();
-        let productThumbs = document.querySelectorAll('.product-slider__thumb');
-        productThumbs.forEach(p => p.classList.remove("is-active"));
-        e.target.classList.add("is-active");
+        sliderProductPic.slideTo(e.target.dataset.slideTarget - 1);
 
-        let productPictureID = e.target.getAttribute('href').slice(1);
-        document.getElementById(productPictureID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        })
+        // e.stopPropagation();
+        // e.preventDefault();
+        // let productThumbs = document.querySelectorAll('.product-slider__thumb');
+        // productThumbs.forEach(p => p.classList.remove("is-active"));
+        // e.target.classList.add("is-active");
+
+        // let productPictureID = e.target.getAttribute('href').slice(1);
+        // document.getElementById(productPictureID).scrollIntoView({
+        //     behavior: 'smooth',
+        //     block: 'start'
+        // })
     }
 })
 
@@ -87,9 +89,16 @@ window.addEventListener('resize', function () {
 Fancybox.bind("[data-fancybox]", {});
 
 
-// слайдер через фансибокс
+// слайдер на главной через фансибокс
 const sliderMain = document.getElementById("sliderMain");
 if (sliderMain) { new Carousel(sliderMain, { infinite: false }) }
+
+// слайдер фото товара на странице товара
+const sliderProductPicEl = document.getElementById("sliderProductPic");
+let sliderProductPic;
+if (sliderProductPicEl) {
+    sliderProductPic = new Carousel(sliderProductPicEl, { infinite: true, slidesPerPage: 1 })
+}
 
 
 // выбор самовывоза
@@ -97,7 +106,6 @@ let deliveryInputs = document.querySelectorAll('input[name="delivery"]');
 if (deliveryInputs) {
     let pickupShowElements = document.querySelectorAll('[data-action="isPickupShow"]');
     let pickupHiddenElements = document.querySelectorAll('[data-action="isPickupHidden"]');
-
 
     deliveryInputs.forEach(deliveryInput => {
         deliveryInput.addEventListener("change", (e) => {

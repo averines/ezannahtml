@@ -28,7 +28,6 @@
     <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
 </head>
 
-
 <body>
     <header>
         <script type="application/ld+json">
@@ -269,41 +268,43 @@
             <div class="product">
                 <div class="product-slider">
                     <div class="product-slider__thumbs">
-                        <a href="#pic-1" class="product-slider__thumb is-active">
+                        <div class="product-slider__thumb" data-slide-target="1">
                             <picture>
                                 <source type="image/webp" srcset="./i/products/z01-sm.webp">
                                 <img src="./i/products/z01-sm.jpg" alt="Костюм (худи и брюки) #91697 превью 1" width="64" height="97">
                             </picture>
-                        </a>
-                        <a href="#pic-2" class="product-slider__thumb">
+                        </div>
+                        <div class="product-slider__thumb" data-slide-target="2">
                             <picture>
                                 <source type="image/webp" srcset="./i/products/z01-sm.webp">
                                 <img src="./i/products/z01-sm.jpg" alt="Костюм (худи и брюки) #91697 превью 2" width="64" height="97">
                             </picture>
-                        </a>
-                        <a href="#pic-3" class="product-slider__thumb">
+                        </div>
+                        <div class="product-slider__thumb" data-slide-target="3">
                             <picture>
                                 <source type="image/webp" srcset="./i/products/z01-sm.webp">
                                 <img src="./i/products/z01-sm.jpg" alt="Костюм (худи и брюки) #91697 превью 3" width="64" height="97">
                             </picture>
-                        </a>
+                        </div>
                     </div>
                     <div class="product-slider__content">
-                        <picture id="pic-1">
-                            <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/z01-xl.webp">
-                            <source type="image/webp" srcset="./i/products/z01.webp">
-                            <img src="./i/products/z01.jpg" alt="Костюм (худи и брюки) #91697 фото 1" width="345" height="517">
-                        </picture>
-                        <picture id="pic-2">
-                            <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/z01-xl.webp">
-                            <source type="image/webp" srcset="./i/products/z01.webp">
-                            <img src="./i/products/z01.jpg" alt="Костюм (худи и брюки) #91697 фото 2" width="345" height="517">
-                        </picture>
-                        <picture id="pic-3">
-                            <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/z01-xl.webp">
-                            <source type="image/webp" srcset="./i/products/z01.webp">
-                            <img src="./i/products/z01.jpg" alt="Костюм (худи и брюки) #91697 фото 3" width="345" height="517">
-                        </picture>
+                        <div class="f-carousel" id="sliderProductPic">
+                            <picture class="f-carousel__slide">
+                                <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/z01-xl.webp">
+                                <source type="image/webp" srcset="./i/products/z01.webp">
+                                <img src="./i/products/z01.jpg" alt="Костюм (худи и брюки) #91697 фото 1" width="345" height="517">
+                            </picture>
+                            <picture class="f-carousel__slide">
+                                <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/z01-xl.webp">
+                                <source type="image/webp" srcset="./i/products/z01.webp">
+                                <img src="./i/products/z01.jpg" alt="Костюм (худи и брюки) #91697 фото 2" width="345" height="517">
+                            </picture>
+                            <picture class="f-carousel__slide">
+                                <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/z01-xl.webp">
+                                <source type="image/webp" srcset="./i/products/z01.webp">
+                                <img src="./i/products/z01.jpg" alt="Костюм (худи и брюки) #91697 фото 3" width="345" height="517">
+                            </picture>
+                        </div>
                     </div>
                 </div>
 
@@ -376,6 +377,7 @@
                                     <button class="product-size">58</button>
                                     <button class="product-size">60</button>
                                 </div>
+                                <p>Кликните на размер, чтобы добавить его в Корзину</p>
                                 <!-- <button class="btn-link mt-1" data-fancybox data-type="ajax" data-src="modal-product-table.html">Таблица размеров</button> -->
                             </div>
                         </div>
@@ -409,7 +411,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- похожие товары -->
         <section class="py-4 mt-3">
