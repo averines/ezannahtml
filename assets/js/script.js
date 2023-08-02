@@ -86,7 +86,17 @@ window.addEventListener('resize', function () {
 
 
 // всплывающие окна через фансибокс
-Fancybox.bind("[data-fancybox]", {});
+Fancybox.bind("[data-fancybox]", {
+    autoFocus: false,
+    placeFocusBack: false,
+    Toolbar: {
+        display: {
+            left: ['infobar'],
+            middle: [],
+            right: ['close']
+        }
+    }
+});
 
 
 // слайдер на главной через фансибокс
